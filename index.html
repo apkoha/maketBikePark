@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>BikePark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="top-line">
+      <a class="logo" href="index.html">
+        <img class="logo-image" src="/img/logo.svg" alt="Логотип" width="30" height="25">
+        <h1 class="logo-text">BikePark</h1>
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a class="nav-link" href="#.html">О нас</a></li>
+          <li><a class="nav-link" href="#.html">Аренда</a></li>
+          <li><a class="nav-link" href="#.html">Доставка</a></li>
+          <li><a class="nav-link" href="#.html">Где кататься</a></li>
+          <li><a class="nav-link" href="#.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-btn">
+        <ul class="header-btn-list">
+          <li class="header-btn-list-item">
+            <button class="header_btn_1" type="button"></button>
+          </li>
+          <li class="header-btn-list-item">
+            <button class="btn header_btn_2" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+          </li>
+        </ul>
+      </div>
+      <span class="time-counter">12:00</span>
+    </div>
+  </header>
+  <main>
+    <article class="main-content">
+      <h2 class="main-content-tittle">Аренда велосипедов<br>с доставкой</h2>
+      <ul class="main-content-list">
+        <li class="main-content-images">Шлем<br class="main-content-images-text">Бесплатно
+          <img src="img/helmet.png" width="190" height="143" alt="изображение шлема">
+          <!--не прописан размер картинки-->
+        </li>
+        <li class="main-content-images">Фонарик<br class="main-content-images-text">Бесплатно
+          <img src="img/flashlight.png" width="179" height="184" alt="изображение фонарика">
+          <!--не прописан размер картинки-->
+        </li>
+        <li class="main-content-images">Замок<br class="main-content-images-text">Бесплатно
+          <img src="img/locker.png" width="152" height="152" alt="изображение велосипедного замка">
+          <!--не прописан размер картинки-->
+        </li>
+      </ul>
+      <ul class="main-content-text-list">
+        <li class="main-content-text-list-item">Тип аренды</li>
+        <li class="main-content-text-list-item">Дата и время начала</li>
+        <li class="main-content-text-list-item">Дата и время конца</li>
+        <li class="main-content-text-list-item">Доставка</li>
+      </ul>
+      <!--делаем таблицу с временем аренды-->
+    </article>
+    <section class="choice-bicycles choice-bicycles-content">
+      <h2 class="choice-bicycles-tittle">Тип велосипеда</h2>
+      <ul class="choice-bicycles-list">
+        <li class="choice-bicycles-list-item">
+          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+          <div class="choice-bicycles-container">
+            <h3 class="choice-bicycles-container-text">Алюминий</h3>
+            <p class="price price-text">90 AED</p>
+            <div class="choice-btn-container">
+              <button class="choice-btn types_btn_1" type="button"></button>
+              <button class="choice-btn types_btn_2" type="button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="choice-bicycles-list-item">
+          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+          <div class="choice-bicycles-container">
+            <h3 class="choice-bicycles-container-text">Карбон</h3>
+            <p class="price price-text">180 AED</p>
+            <div class="choice-btn-container">
+              <button class="choice-btn types_btn_1" type="button"></button>
+              <button class="choice-btn types_btn_2" type="button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="choice-bicycles-list-item">
+          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+          <div class="choice-bicycles-container">
+            <h3 class="choice-bicycles-container-text">Горный/городской</h3>
+            <p class="price price-text">90 AED</p>
+            <div class="choice-btn-container">
+              <button class="choice-btn types_btn_1" type="button"></button>
+              <button class="choice-btn types_btn_2" type="button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="choice-bicycles-list-item">
+          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+          <div class="choice-bicycles-container">
+            <h3 class="choice-bicycles-container-text">Городской эконом</h3>
+            <p class="price price-text">45 AED</p>
+            <div class="choice-btn-container">
+              <button class="choice-btn types_btn_1" type="button"></button>
+              <button class="choice-btn types_btn_2" type="button"></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="btn types_btn_3" type="button">Найти</button>
+    </section>
+    <!--<section>
+      <div>
+      </div>
+      <ul>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <a href="#">Посмотреть свободные даты</a>
+          <button class="brands-sizes_btn" type="button">ЗАНЯТ</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>180 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <a href="#">Посмотреть свободные даты</a>
+          <button class="brands-sizes_btn" type="button">ЗАНЯТ</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>180 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+        <li>
+          <h2>20"</h2>
+          <p>SCHWINN</p>
+          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
+          <p>Городской велосипед Schwinn Traveler 20"</p>
+          <p>90 AED/день</p>
+          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        </li>
+      </ul>
+      <button class="brands-sizes_btn" type="button">Далее</button>
+    </section>-->
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top-line">
+        <h2 class="fotter-tittle">Аренда велосипедов</h2>
+        <ul class="footer-nav">
+          <li><a class="footer-nav-link" href="#">Правила</a></li>
+          <li><a class="footer-nav-link" href="#">Отзывы</a></li>
+          <li><a class="footer-nav-link" href="#">Контакты</a></li>
+          <li><a class="footer-nav-link" href="#">Обратная связь</a></li>
+        </ul>
+      </div>
+      <ul class="footer-bicycle-type-list">
+        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Алюминий</a></li>
+        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Карбон</a></li>
+        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Горные/городские</a></li>
+        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Городские эконом</a></li>
+      </ul>
+      <div class="footer-second-line">
+        <p class="copyring">&copy; BikePark, 2021</p>
+        <a class="policy" href="#">Политика конфиденциальности</a>
+        <ul class="social-list">
+          <li><a class="social-list-link facebook-link" href="#" aria-label="Фейсбук"></a></li>
+          <li><a class="social-list-link instagram-link" href="#" aria-label="Инстаграм"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
