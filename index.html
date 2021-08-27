@@ -5,7 +5,7 @@
     <title>BikePark</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -13,25 +13,25 @@
   <header class="header">
     <div class="top-line">
       <a class="logo" href="index.html">
-        <img class="logo-image" src="img/logo.svg" alt="Логотип" width="30" height="25">
-        <h1 class="logo-text">BikePark</h1>
+        <img class="logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="visualy-hidden">BikePark</h1>
       </a>
       <nav>
         <ul class="nav">
-          <li><a class="nav-link" href="#.html">О нас</a></li>
-          <li><a class="nav-link" href="#.html">Аренда</a></li>
-          <li><a class="nav-link" href="#.html">Доставка</a></li>
-          <li><a class="nav-link" href="#.html">Где кататься</a></li>
-          <li><a class="nav-link" href="#.html">Контакты</a></li>
+          <li><a class="nav-link" href="#">О нас</a></li>
+          <li><a class="nav-link" href="#">Аренда</a></li>
+          <li><a class="nav-link" href="#">Доставка</a></li>
+          <li><a class="nav-link" href="#">Где кататься</a></li>
+          <li><a class="nav-link" href="#">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-btn">
-        <ul class="header-btn-list">
-          <li class="header-btn-list-item">
-            <button class="header_btn_1" type="button"></button>
+      <div class="header-button">
+        <ul class="header-button__list">
+          <li class="button-list__item">
+            <button class="button__enter" type="button"></button>
           </li>
-          <li class="header-btn-list-item">
-            <button class="btn header_btn_2" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+          <li class="button-list__item">
+            <button class="button__feedback button--blue" type="button">ОБРАТНАЯ СВЯЗЬ</button>
           </li>
         </ul>
       </div>
@@ -39,80 +39,130 @@
     </div>
   </header>
   <main>
-    <article class="main-content">
-      <h2 class="main-content-tittle">Аренда велосипедов<br>с доставкой</h2>
-      <ul class="main-content-list">
-        <li class="main-content-images">Шлем<br class="main-content-images-text">Бесплатно
-          <img src="img/helmet.png" width="190" height="143" alt="изображение шлема">
-          <!--не прописан размер картинки-->
+    <section class="main-content">
+      <div class="main-content__container">
+        <div class="content-tittle__container">
+          <h2 class="main-content__tittle">Аренда велосипедов<br>с доставкой</h2>
+        </div>
+        <ul class="main-content__list">
+          <li class="content__images">
+            <div class="content__container container--helmet">
+              <p class="container__text">Шлем</p>
+              <span class="container__free">Бесплатно</span>
+            </div>
+          </li>
+          <li class="content__images">
+            <div class="content__container container--flashlight">
+              <p class="container__text">Фонарик</p>
+              <span class="container__free">Бесплатно</span>
+            </div>
+          </li>
+          <li class="content__images">
+            <div class="content__container container--locker">
+              <p class="container__text">Замок</p>
+              <span class="container__free">Бесплатно</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="content-data__list">
+        <li class="data-list__item">Тип аренды
+          <div class="flight-types">
+            <input type="radio" name="flight-type" value="По дням" id="По дням" />
+            <label for="По дням">
+              По дням
+            </label>
+            <input type="radio" name="flight-type" value="2 часа" id="2 часа" checked />
+            <label for="2 часа">
+              2 часа
+            </label>
+          </div>
         </li>
-        <li class="main-content-images">Фонарик<br class="main-content-images-text">Бесплатно
-          <img src="img/flashlight.png" width="179" height="184" alt="изображение фонарика">
-          <!--не прописан размер картинки-->
+        <li class="data-list__item">Дата и время начала
+          <input type="date" name="" id="">
         </li>
-        <li class="main-content-images">Замок<br class="main-content-images-text">Бесплатно
-          <img src="img/locker.png" width="152" height="152" alt="изображение велосипедного замка">
-          <!--не прописан размер картинки-->
+        <li class="data-list__item">Дата и время конца
+          <input type="date" name="" id="">
+        </li>
+        <li class="data-list__item">Доставка
+          <ul>
+            <li>По адресу</li>
+            <li>Самовывоз</li>
+          </ul>
         </li>
       </ul>
-      <ul class="main-content-text-list">
-        <li class="main-content-text-list-item">Тип аренды</li>
-        <li class="main-content-text-list-item">Дата и время начала</li>
-        <li class="main-content-text-list-item">Дата и время конца</li>
-        <li class="main-content-text-list-item">Доставка</li>
-      </ul>
-      <!--делаем таблицу с временем аренды-->
-    </article>
-    <section class="choice-bicycles choice-bicycles-content">
-      <h2 class="choice-bicycles-tittle">Тип велосипеда</h2>
-      <ul class="choice-bicycles-list">
-        <li class="choice-bicycles-list-item">
-          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
-          <div class="choice-bicycles-container">
-            <h3 class="choice-bicycles-container-text">Алюминий</h3>
-            <p class="price price-text">90 AED</p>
-            <div class="choice-btn-container">
-              <button class="choice-btn types_btn_1" type="button"></button>
-              <button class="choice-btn types_btn_2" type="button"></button>
-            </div>
-          </div>
-        </li>
-        <li class="choice-bicycles-list-item">
-          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
-          <div class="choice-bicycles-container">
-            <h3 class="choice-bicycles-container-text">Карбон</h3>
-            <p class="price price-text">180 AED</p>
-            <div class="choice-btn-container">
-              <button class="choice-btn types_btn_1" type="button"></button>
-              <button class="choice-btn types_btn_2" type="button"></button>
-            </div>
-          </div>
-        </li>
-        <li class="choice-bicycles-list-item">
-          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
-          <div class="choice-bicycles-container">
-            <h3 class="choice-bicycles-container-text">Горный/городской</h3>
-            <p class="price price-text">90 AED</p>
-            <div class="choice-btn-container">
-              <button class="choice-btn types_btn_1" type="button"></button>
-              <button class="choice-btn types_btn_2" type="button"></button>
-            </div>
-          </div>
-        </li>
-        <li class="choice-bicycles-list-item">
-          <img class="bicycles-image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
-          <div class="choice-bicycles-container">
-            <h3 class="choice-bicycles-container-text">Городской эконом</h3>
-            <p class="price price-text">45 AED</p>
-            <div class="choice-btn-container">
-              <button class="choice-btn types_btn_1" type="button"></button>
-              <button class="choice-btn types_btn_2" type="button"></button>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <button class="btn types_btn_3" type="button">Найти</button>
     </section>
+    <article class="choice-bicycles bicycles__content">
+      <h2 class="choice-bicycles__tittle">Тип велосипеда</h2>
+      <ul class="choice-bicycles__list bicycles-list">
+        <li class="bicycles-list__item bicycle">
+          <div class="bicycle">
+            <img class="bicycles__image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+            <div class="choice-bicycles-container">
+              <span class="bicycle__text">Алюминий</span>
+              <div class="bicycle__price-container">
+                <span class="bicycle__price price">90 AED</span>
+                <div class="bicycle__button">
+                  <button class="bicycle__help button--small bicycle__help--aluminum" type="button"></button>
+                  <button class="bicycle__add button--small" type="button"></button>
+                </div>
+                <div class="help-aluminium__button">
+                  <p class="aluminium-button__text">
+                    Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="bicycles-list__item bicycle">
+          <div class="bicycle">
+            <img class="bicycles__image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+            <div class="choice-bicycles-container">
+              <span class="bicycle__text">Карбон</span>
+              <div class="bicycle__price-container">
+                <span class="bicycle__price price">180 AED</span>
+                <div class="bicycle__button">
+                  <button class="bicycle__help button--small" type="button"></button>
+                  <button class="bicycle__add button--small" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="bicycles-list__item bicycle">
+          <div class="bicycle">
+            <img class="bicycles__image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+            <div class="choice-bicycles-container">
+              <span class="bicycle__text">Горный/городской</span>
+              <div class="bicycle__price-container">
+                <span class="bicycle__price price">90 AED</span>
+                <div class="bicycle__button">
+                  <button class="bicycle__help button--small" type="button"></button>
+                  <button class="bicycle__add button--small" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="bicycles-list__item bicycle">
+          <div class="bicycle">
+            <img class="bicycles__image" src="img/type-of-bicycles.png" width="259" height="137" alt="изображение велосипеда">
+            <div class="choice-bicycles-container">
+              <span class="bicycle__text">Городской эконом</span>
+              <div class="bicycle__price-container">
+                <span class="bicycle__price price">45 AED</span>
+                <div class="bicycle__button">
+                  <button class="bicycle__help button--small" type="button"></button>
+                  <button class="bicycle__add button--small" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="choice-bicycles__button button--blue" type="button">Найти</button>
+    </article>
     <!--<section>
       <div>
       </div>
@@ -190,26 +240,28 @@
   <footer>
     <div class="footer-container">
       <div class="footer-top-line">
-        <h2 class="fotter-tittle">Аренда велосипедов</h2>
+        <a class="top-line__link" href="index.html">
+          <h2 class="fotter-tittle">Аренда велосипедов</h2>
+        </a>
         <ul class="footer-nav">
-          <li><a class="footer-nav-link" href="#">Правила</a></li>
-          <li><a class="footer-nav-link" href="#">Отзывы</a></li>
-          <li><a class="footer-nav-link" href="#">Контакты</a></li>
-          <li><a class="footer-nav-link" href="#">Обратная связь</a></li>
+          <li><a class="footer-nav__link" href="rules.html">Правила</a></li>
+          <li><a class="footer-nav__link" href="#">Отзывы</a></li>
+          <li><a class="footer-nav__link" href="#">Контакты</a></li>
+          <li><a class="footer-nav__link" href="#">Обратная связь</a></li>
         </ul>
       </div>
-      <ul class="footer-bicycle-type-list">
-        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Алюминий</a></li>
-        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Карбон</a></li>
-        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Горные/городские</a></li>
-        <li class="footer-bicycle-type-list-item"><a class="footer-bicycle-type-list-link" href="#">Городские эконом</a></li>
+      <ul class="type-list">
+        <li class="type-list__item"><a class="type-list__link" href="#">Алюминий</a></li>
+        <li class="type-list__item"><a class="type-list__link" href="#">Карбон</a></li>
+        <li class="type-list__item"><a class="type-list__link" href="#">Горные/городские</a></li>
+        <li class="type-list__item"><a class="type-list__link" href="#">Городские эконом</a></li>
       </ul>
       <div class="footer-second-line">
         <p class="copyring">&copy; BikePark, 2021</p>
         <a class="policy" href="#">Политика конфиденциальности</a>
         <ul class="social-list">
-          <li><a class="social-list-link facebook-link" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social-list-link instagram-link" href="#" aria-label="Инстаграм"></a></li>
+          <li><a class="social__link facebook-link" href="#" aria-label="Фейсбук"></a></li>
+          <li><a class="social__link instagram-link" href="#" aria-label="Инстаграм"></a></li>
         </ul>
       </div>
     </div>

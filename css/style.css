@@ -2,21 +2,32 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.logo-text {
-  margin: 0px;
-  color: #297fff;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.button--blue {
+  cursor: pointer;
+  background-color: #297fff;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.button--blue:hover {
+  background-color: #005eff;
+  border-radius
 }
 
 .logo {
-  display: block;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 68px;
   height: 42px;
   text-decoration: none;
@@ -50,14 +61,14 @@ body {
   color: #297fff;
 }
 
-.header-btn-list {
+.header-button__list {
   display: flex;
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-.header_btn_1 {
+.button__enter {
   position: relative;
   display: block;
   width: 40px;
@@ -69,7 +80,7 @@ body {
   cursor: pointer;
 }
 
-.header_btn_1::before {
+.button__enter::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -80,23 +91,15 @@ body {
   background-position: 0 0;
 }
 
-.btn {
+.button__feedback {
+  width: 200px;
+  height: 40px;
+  margin-left: 40px;
   padding: 0px;
-  cursor: pointer;
-  background-color: #297fff;
-  border: none;
-  border-radius: 10px;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: #ffffff;
-}
-
-.header_btn_2 {
-  width: 200px;
-  height: 40px;
-  margin-left: 40px;
 }
 
 .time-counter {
@@ -109,27 +112,58 @@ body {
 
 .main-content,
 .choice-bicycles {
+  position: relative;
   margin: 0 auto;
   width: 1240px;
-  background-color: #f2f4f7;
+  background-color: #F2F4F7;
   border-radius: 20px;
 }
 
-.main-content-list {
-  display: flex;
-  list-style: none;
+.main-content::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 40px;
+  background-position: 0 0;
+  width: 74px;
+  height: 17px;
+  background: url("../img/intersect-top.png") no-repeat;
 }
 
-.main-content-tittle {
-  margin-left: 40px;
+.main-content__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-tittle__container {
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  top: 56px;
+  width: 549px;
+  height: 116px;
+}
+
+.main-content__tittle {
+  margin: 0px;
   padding: 0px;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
   line-height: 58px;
+  color: #14233D;
 }
 
-.main-content-images,
+.main-content__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.content__images,
 .choice-bicycles-list-item {
   font-style: normal;
   font-weight: 500;
@@ -137,7 +171,7 @@ body {
   line-height: 22px;
 }
 
-.main-content-images-text,
+.container__free,
 .price {
   font-style: normal;
   font-weight: bold;
@@ -146,18 +180,90 @@ body {
   color: #297fff;
 }
 
-.main-content-text-list {
+.content__container {
+  width: 316px;
+  height: 210px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.content__container::before {
+  content: "";
+  position: absolute;
+  background-position: 0 0;
+}
+
+.container--helmet {
+  position: relative;
+  left: 238px;
+  background-image: url(../img/helmet-background.png);
+}
+
+.container--helmet::before {
+  top: 13px;
+  left: 89px;
+  width: 190px;
+  height: 143px;
+  background: url("../img/helmet.png") no-repeat;
+}
+
+.container--flashlight { 
+  position: relative;
+  left: 118px;
+  background-image: url(../img/flashlight-backgroung.png);
+}
+
+.container--flashlight::before {
+  top: 6px;
+  left: 100px;
+  width: 179px;
+  height: 184px;
+  background: url("../img/flashlight.png") no-repeat;
+}
+
+.container--locker {
+  position: relative;
+  width: 272px;
+  height: 210px;
+  background-image: url(../img/locker-backgroung.png);
+}
+
+.container--locker::before {
+  top: 15px;
+  left: 97px;
+  width: 152px;
+  height: 152px;
+  background: url("../img/locker.png") no-repeat;
+}
+
+.container__text {
+  margin: 0px;
+  margin-left: 59px;
+  padding: 0px;
+  padding-top: 139px;
+  padding-bottom: 5px;
+  padding-right: 155px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233D;
+}
+
+.container__free {
+  margin-left: 59px;
+  padding-right: 85px;
+}
+
+.content-data__list {
   display: flex;
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-.main-content-text-list-item,
-.choice-bicycles-tittle {
-  padding-top: 26px;
-  margin-right: 40px;
-  margin-left: 40px;
+.data-list__item {
+  margin: 0px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -165,43 +271,70 @@ body {
   color: #abb1c5;
 }
 
-.choice-bicycles-content {
+/*segmented control кнопки*/
+/*конец свойст segmented control кнопок*/
+
+.choice-bicycles::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 40px;
+  background-position: 0 0;
+  width: 74px;
+  height: 17px;
+  background: url("../img/intersect-down.png") no-repeat;
+}
+
+.choice-bicycles__tittle {
+  margin: 0px;
+  padding-top: 33px;
+  padding-right: 1000px;
+  padding-left: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.bicycles__content {
   margin-top: 34px;
   margin-bottom: 75px;
 }
 
-.choice-bicycles-list {
+.choice-bicycles__list {
   display: flex;
+  justify-content: flex-start;
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-.choice-bicycles-list-item {
+.bicycles-list__item {
   margin: 0px;
   margin-left: 40px;
 }
 
-.bicycles-image {
+.bicycles__image {
   position: relative;
-  top: 28px;
+  top: 34px;
 }
 
 .choice-bicycles-container {
   display: flex;
   flex-wrap: wrap;
   width: 260px;
-  height: 142px;
+  height: 145px;
   border-radius: 15px;
   background-color: #ffffff;
 }
 
-.choice-bicycles-container-text {
-  margin-top: 49px;
-  margin-right: 20px;
-  margin-bottom: 13px;
-  margin-left: 24px;
-  padding-right: 40px;
+.bicycle__text {
+  width: 260px;
+  padding-top: 49px;
+  padding-bottom: 13px;
+  padding-left: 24px;
+  padding-right: 38px;
   color: #000000;
   font-style: normal;
   font-weight: 500;
@@ -209,18 +342,21 @@ body {
   line-height: 22px;
 }
 
-.price-text {
+.bicycle__price {
   margin: 0px;
-  margin-left: 24px;
-  padding-top: 9px;
 }
 
-.choice-btn-container {
-  margin-bottom: 18px;
-  margin-left: 44px;
+.bicycle__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-.choice-btn {
+.button--small {
   width: 40px;
   height: 40px;
   border: 1px solid #dde3eb;
@@ -230,16 +366,37 @@ body {
   cursor: pointer;
 }
 
-.types_btn_1 {
+.bicycle__help {
   background-image: url("../img/question-mark.svg");
 }
 
-.types_btn_2 {
+.bicycle__add {
   margin-left: 10px;
   background-image: url("../img/plus-mark.svg");
 }
 
-.types_btn_3 {
+.help-aluminium__button {
+  /*display: none;*/
+  position: absolute;
+  bottom: 37px;
+  left: 40px;
+  width: 260px;
+  height: 105px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.aluminium-button__text {
+  margin: 0px;
+  padding: 13px 12px 16px 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ABB1C5;
+}
+
+.choice-bicycles__button {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -269,6 +426,11 @@ footer {
   justify-content: space-between;
 }
 
+.top-line__link {
+text-decoration: none;
+color: inherit;
+}
+
 .fotter-tittle {
   margin-top: 52px;
   margin-left: 40px;
@@ -285,7 +447,7 @@ footer {
   padding: 0px;
 }
 
-.footer-nav-link {
+.footer-nav__link {
   text-decoration: none;
   color: inherit;
   margin-right: 48px;
@@ -295,18 +457,18 @@ footer {
   line-height: 22px;
 }
 
-.footer-bicycle-type-list {
+.type-list {
   list-style: none;
   margin: 0px;
   margin-top: 12px;
   padding: 0px;
 }
 
-.footer-bicycle-type-list-item {
+.type-list__item {
   margin-bottom: 8px;
 }
 
-.footer-bicycle-type-list-link {
+.type-list__link {
   margin-left: 40px;
   text-decoration: none;
   color: inherit;
@@ -346,7 +508,7 @@ footer {
   padding: 0px;
 }
 
-.social-list-link {
+.social__link {
   display: block;
   width: 32px;
   height: 32px;
