@@ -5,7 +5,7 @@
     <title>BikePark</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -35,7 +35,7 @@
           </li>
         </ul>
       </div>
-      <span class="time-counter">12:00</span>
+      <div id="current_date_time_block" class="time-counter">12:00</div>
     </div>
   </header>
   <main>
@@ -66,34 +66,47 @@
         </ul>
       </div>
       <ul class="content-data__list">
-        <li class="data-list__item">Тип аренды
-          <div class="flight-types">
-            <input type="radio" name="flight-type" value="По дням" id="По дням" />
-            <label for="По дням">
-              По дням
-            </label>
-            <input type="radio" name="flight-type" value="2 часа" id="2 часа" checked />
-            <label for="2 часа">
-              2 часа
-            </label>
+        <li class="data-list__item">
+          <div class="rent-type__container">
+            <p class="rent-type__text type-text--grey">Типа аренды</p>
+            <div class="flight-types">
+              <input type="radio" name="flight-type" value="По дням" id="По дням" />
+              <label for="По дням">
+                По дням
+              </label>
+              <input type="radio" name="flight-type" value="2 часа" id="2 часа" checked />
+              <label for="2 часа">
+                2 часа
+              </label>
+            </div>
           </div>
         </li>
-        <li class="data-list__item">Дата и время начала
-          <input type="date" name="" id="">
+        <li class="data-list__item type-text--grey">
+          <div class="rent-type__container start-data__container data-item--vector">
+            <p class="start-data__text type-text--grey">Дата и время начала</p>   
+            <input class="data-counter" type="datetime-local" name="" id="">
+          </div>
         </li>
-        <li class="data-list__item">Дата и время конца
-          <input type="date" name="" id="">
+        <li class="data-list__item type-text--grey">
+          <div class="rent-type__container data-item--vector">
+            <p class="end-data__text type-text--grey">Дата и время конца</p>
+            <input class="data-counter" type="datetime-local" name="" id="">
+          </div>
         </li>
-        <li class="data-list__item">Доставка
-          <ul>
-            <li>По адресу</li>
-            <li>Самовывоз</li>
-          </ul>
+        <li class="data-list__item type-text--grey">
+          <div class="rent-type__container data-item--vector">
+            <p class="delivery-type__text type-text--grey">Доставка</p>
+            <!--класс и name могут ли быть одинаковыми?-->
+            <select name="delivery-type" id="" class="delivery-type__option">
+              <option class="delivery-type">По адресу</option>
+              <option class="delivery-type">Самовывоз</option>
+            </select>
+          </div>
         </li>
       </ul>
     </section>
     <article class="choice-bicycles bicycles__content">
-      <h2 class="choice-bicycles__tittle">Тип велосипеда</h2>
+      <h2 class="choice-bicycles__tittle type-text--grey">Тип велосипеда</h2>
       <ul class="choice-bicycles__list bicycles-list">
         <li class="bicycles-list__item bicycle">
           <div class="bicycle">
@@ -103,11 +116,11 @@
               <div class="bicycle__price-container">
                 <span class="bicycle__price price">90 AED</span>
                 <div class="bicycle__button">
-                  <button class="bicycle__help button--small bicycle__help--aluminum" type="button"></button>
+                  <button class="bicycle__help button--small bicycle__help--aluminum test" type="button"></button>
                   <button class="bicycle__add button--small" type="button"></button>
                 </div>
                 <div class="help-aluminium__button">
-                  <p class="aluminium-button__text">
+                  <p class="aluminium-button__text aluminium-text--arrow type-text--grey">
                     Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
                   </p>
                 </div>
@@ -163,79 +176,131 @@
       </ul>
       <button class="choice-bicycles__button button--blue" type="button">Найти</button>
     </article>
-    <!--<section>
-      <div>
+    <section class="bicycle-model card__product">
+      <div class="model__brand-size">
+        <div class="brand__container">
+          <p class="brand__text type-text--grey">Бренд</p>
+          <select name="model__brand" id="" class="model__brand">
+            <option class="bicycles__brand">Все</option>
+            <option class="bicycles__brand">SCHWINN</option>
+            <option class="bicycles__brand">Specialized</option>
+            <option class="bicycles__brand">Ghost</option>
+            <option class="bicycles__brand">Cube</option>
+          </select>
+        </div>
+        <div class="size__container">
+          <p class="size__text type-text--grey">Размер рамы</p>
+          <select name="model__size" id="" class="model__size">
+            <option class="bicycles__size">Все</option>
+            <option class="bicycles__size">18”</option>
+            <option class="bicycles__size">19”</option>
+            <option class="bicycles__size">20”</option>
+            <option class="bicycles__size">21”</option>
+          </select>
+        </div>
       </div>
-      <ul>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+      <ul class="product__list">
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">90 AED/день</p>
+          <button class="product__button button--blue" type="button">ВЫБРАНО</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+          SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model model--busy">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price  model--busy">90 AED/день</p>
           <a href="#">Посмотреть свободные даты</a>
-          <button class="brands-sizes_btn" type="button">ЗАНЯТ</button>
+          <button class="product__button button--busy" type="button">ЗАНЯТ</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>180 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">180 AED/день</p>
+        <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">90 AED/день</p>
+        <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">90 AED/день</p>
+          <button class="product__button button--blue" type="button">ОТМЕНИТЬ ВЫБОР</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price price--busy">90 AED/день</p>
           <a href="#">Посмотреть свободные даты</a>
-          <button class="brands-sizes_btn" type="button">ЗАНЯТ</button>
+          <button class="product__button" type="button">ЗАНЯТ</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>180 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">180 AED/день</p>
+        <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
-        <li>
-          <h2>20"</h2>
-          <p>SCHWINN</p>
-          <img src="img/type-of-bicycles.jpg" width="" height="" alt="">
-          <p>Городской велосипед Schwinn Traveler 20"</p>
-          <p>90 AED/день</p>
-          <button class="brands-sizes_btn" type="button">ВЫБРАНО</button>
+        <li class="product__item">
+          <p class="product__brand">
+            <span class="product__size">20"</span>
+            SCHWINN
+          </p>
+          <div class="product__image">
+            <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
+          </div>
+          <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
+          <p class="product__price price">90 AED/день</p>
+        <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
       </ul>
-      <button class="brands-sizes_btn" type="button">Далее</button>
-    </section>-->
+      <button class="button__further button--blue" type="button">Далее</button>
+    </section>
   </main>
   <footer>
     <div class="footer-container">
@@ -266,5 +331,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

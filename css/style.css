@@ -13,17 +13,23 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.button--blue {
-  cursor: pointer;
-  background-color: #297fff;
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
 .button--blue:hover {
   background-color: #005eff;
-  border-radius
+}
+
+.button--blue:active,
+.button--blue:focus {
+  background-color: #297fff;
+  outline: none;
+}
+
+.type-text--grey {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #abb1c5;
 }
 
 .logo {
@@ -58,6 +64,10 @@ body {
 }
 
 .nav-link:hover {
+  color: #297fff;
+}
+
+.nav-link:active {
   color: #297fff;
 }
 
@@ -111,11 +121,12 @@ body {
 }
 
 .main-content,
-.choice-bicycles {
+.choice-bicycles,
+.bicycle-model {
   position: relative;
   margin: 0 auto;
   width: 1240px;
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
   border-radius: 20px;
 }
 
@@ -151,7 +162,7 @@ body {
   font-weight: 600;
   font-size: 48px;
   line-height: 58px;
-  color: #14233D;
+  color: #14233d;
 }
 
 .main-content__list {
@@ -178,6 +189,10 @@ body {
   font-size: 20px;
   line-height: 22px;
   color: #297fff;
+}
+
+.price--busy {
+  color: #abb1c5;
 }
 
 .content__container {
@@ -207,7 +222,7 @@ body {
   background: url("../img/helmet.png") no-repeat;
 }
 
-.container--flashlight { 
+.container--flashlight {
   position: relative;
   left: 118px;
   background-image: url(../img/flashlight-backgroung.png);
@@ -247,7 +262,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #14233D;
+  color: #14233d;
 }
 
 .container__free {
@@ -257,22 +272,117 @@ body {
 
 .content-data__list {
   display: flex;
+  justify-content: space-between;
   list-style: none;
+  width: 1160px;
   margin: 0px;
+  margin-top: 29px;
+  margin-right: 40px;
+  margin-left: 40px;
   padding: 0px;
+  padding-bottom: 35px;
 }
 
 .data-list__item {
+  width: 260px;
   margin: 0px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #abb1c5;
+}
+
+.rent-type__text,
+.start-data__text,
+.end-data__text,
+.delivery-type__text {
+  padding-bottom: 15px;
 }
 
 /*segmented control кнопки*/
 /*конец свойст segmented control кнопок*/
+
+.start-data__container {
+  position: relative;
+}
+
+.start-data__container::after {
+  content: "";
+  position: absolute;
+  background-position: 0 0;
+  right: -27px;
+  bottom: 28px;
+  width: 13px;
+  height: 2px;
+  background: url("../img/dash.svg") no-repeat;
+}
+
+.data-counter {
+  width: 260px;
+  height: 60px;
+  padding: 19px 20px 19px 20px;
+  background-color: #ffffff;
+  border: 1px solid #dde3eb;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+  cursor: pointer;
+}
+
+.data-counter:focus {
+  outline: none;
+}
+
+/*opacity: 0 убирает значок календаря в input type="datetime-local"*/
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+
+.delivery-type__option {
+  width: 260px;
+  min-height: 60px;
+  padding: 0px;
+  padding-left: 21px;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+  cursor: pointer;
+}
+
+.delivery-type__option:focus {
+  outline: none;
+}
+
+.delivery-type {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+/*.data-item--vector {
+  position: relative;
+}
+
+.data-item--vector::before {
+  content: "";
+  position: absolute;
+  background-position: 0 0;
+  right: 20px;
+  bottom: 18px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/vector.svg") no-repeat center center;
+  /*cursor: pointer;*/ /*срабатывет через раз*/
+/*}*/
 
 .choice-bicycles::before {
   content: "";
@@ -290,16 +400,11 @@ body {
   padding-top: 33px;
   padding-right: 1000px;
   padding-left: 40px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #abb1c5;
 }
 
 .bicycles__content {
   margin-top: 34px;
-  margin-bottom: 75px;
+  margin-bottom: 34px;
 }
 
 .choice-bicycles__list {
@@ -335,7 +440,7 @@ body {
   padding-bottom: 13px;
   padding-left: 24px;
   padding-right: 38px;
-  color: #000000;
+  color: #14233d;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -364,6 +469,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
+  background-color: #ffffff;
+}
+
+.button--small:focus {
+  outline: none;
 }
 
 .bicycle__help {
@@ -376,7 +486,7 @@ body {
 }
 
 .help-aluminium__button {
-  /*display: none;*/
+  display: none;
   position: absolute;
   bottom: 37px;
   left: 40px;
@@ -384,19 +494,39 @@ body {
   height: 105px;
   background-color: #ffffff;
   border-radius: 15px;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
 }
+
+.bicycle__help--aluminum:hover {
+  background-color: #000; /*тестовый стиль*/
+}
+
+.bicycle__help--aluminum:hover .help-aluminium__button,
+.bicycle__help--aluminum:active .help-aluminium__button,
+.bicycle__help--aluminum:focus .help-aluminium__button {
+  display: block;
+} /*не работает. По нажатию на "?" должна быть подсказка*/
 
 .aluminium-button__text {
   margin: 0px;
   padding: 13px 12px 16px 12px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #ABB1C5;
 }
 
-.choice-bicycles__button {
+.aluminium-text--arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 90px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  box-shadow: 1px 1px 0px 0px rgba(221, 227, 235, 1) inset;
+}
+
+.choice-bicycles__button,
+.button__further {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -410,7 +540,169 @@ body {
   line-height: 22px;
 }
 
+/*Секция с моделями велосипедов*/
+.model__brand-size {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.brand__container,
+.size__container {
+  width: 260px;
+}
+
+.size__container {
+  margin-left: 40px;
+}
+
+.brand__text,
+.size__text {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.model__size,
+.model__brand {
+  width: 260px;
+  min-height: 60px;
+  padding: 0px;
+  padding-left: 21px;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgb(221 227 235) inset;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+  cursor: pointer;
+}
+
+.product__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 40px;
+  margin-left: 40px;
+  list-style: none;
+  padding: 0px;
+}
+
+.product__item {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  min-height: 361px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.product__size {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.product__brand {
+  margin: 0px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-left: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.product__image {
+  margin: 0 auto;
+  width: 230px;
+  height: 140px;
+  background-color: #f2f4f7;
+  border-radius: 10px;
+}
+
+.image__bicycle {
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.product__model {
+  margin: 0px;
+  padding-top: 15px;
+  padding-right: 27px;
+  padding-left: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+.product__price {
+  margin: 0px;
+  padding-top: 11px;
+  padding-right: 27px;
+  padding-left: 22px;
+}
+
+.model--busy {
+  color: #abb1c5;
+}
+
+.product__button {
+  width: 211px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 0px 1px rgba(41, 127, 255, 1) inset;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #297fff;
+  cursor: pointer;
+}
+
+.button--busy {
+  width: 78px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
+  background-color: #ffffff;
+  color: #abb1c5;
+  cursor: pointer;
+}
+
+.product__button:focus,
+.product__button:active,
+.button--busy:focus,
+.button--busy:active {
+  outline: none;
+}
+
+.button--blue {
+  cursor: pointer;
+  background-color: #297fff;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+/*Стилизация футера*/
 footer {
+  margin-top: 75px;
   min-width: 1240px;
   background-color: #272934;
   color: #ffffff;
@@ -427,8 +719,22 @@ footer {
 }
 
 .top-line__link {
-text-decoration: none;
-color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-line__link:hover,
+.footer-nav__link:hover,
+.type-list__link:hover,
+.policy:hover {
+  color: #005eff;
+}
+
+.top-line__link:active,
+.footer-nav__link:active,
+.type-list__link:active,
+.policy:active {
+  color: #297fff;
 }
 
 .fotter-tittle {
@@ -524,3 +830,71 @@ color: inherit;
   margin-left: 32px;
   background-image: url("../img/instagram-icon.svg");
 }
+
+/*CSS страницы RULES*/
+.rules {
+  width: 1240px;
+  margin: 0 auto;
+  margin-bottom: 172px;
+  background-color: #f2f4f7;
+  border-radius: 20px;
+}
+.rules__tittle {
+  margin: 0px;
+  padding-top: 56px;
+  padding-right: 975px;
+  padding-left: 40px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #14233d;
+}
+
+.rules__subtittle {
+  margin: 0px;
+  padding-top: 52px;
+  padding-right: 870px;
+  padding-left: 40px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 31px;
+  color: #14233d;
+}
+
+.rules__row {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding-top: 30px;
+}
+
+.rules__column {
+  width: 360px;
+}
+
+.column__text,
+.rules-damage__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+
+.damage-text {
+  margin: 0px;
+  padding-right: 440px;
+  padding-left: 40px;
+  padding-bottom: 46px;
+}
+
+.damage-text--padding {
+  padding-top: 31px;
+  padding-bottom: 38px;
+}
+
+/*CSS страницы RULES*/
