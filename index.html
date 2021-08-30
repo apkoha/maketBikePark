@@ -21,7 +21,7 @@
           <li><a class="nav-link" href="#">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
-          <li><a class="nav-link" href="#">Где кататься</a></li>
+          <li><a class="nav-link" href="ride.html">Где кататься</a></li>
           <li><a class="nav-link" href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -116,16 +116,16 @@
               <div class="bicycle__price-container">
                 <span class="bicycle__price price">90 AED</span>
                 <div class="bicycle__button">
-                  <button class="bicycle__help button--small bicycle__help--aluminum test" type="button"></button>
-                  <button class="bicycle__add button--small" type="button"></button>
-                </div>
-                <div class="help-aluminium__button">
-                  <p class="aluminium-button__text aluminium-text--arrow type-text--grey">
-                    Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
-                  </p>
+                  <button class="bicycle__help button--small bicycle__help--aluminum" type="button"></button>
+                  <input class="bicycle__add" type="checkbox" id="bicycle-1"><label for="bicycle-1"></label>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="help-aluminium__prompt">
+            <p class="aluminium-prompt__text type-text--grey">
+              Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
+            </p>
           </div>
         </li>
         <li class="bicycles-list__item bicycle">
@@ -137,7 +137,7 @@
                 <span class="bicycle__price price">180 AED</span>
                 <div class="bicycle__button">
                   <button class="bicycle__help button--small" type="button"></button>
-                  <button class="bicycle__add button--small" type="button"></button>
+                  <input class="bicycle__add" type="checkbox" id="bicycle-2"><label for="bicycle-2"></label>
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@
                 <span class="bicycle__price price">90 AED</span>
                 <div class="bicycle__button">
                   <button class="bicycle__help button--small" type="button"></button>
-                  <button class="bicycle__add button--small" type="button"></button>
+                  <input class="bicycle__add" type="checkbox" id="bicycle-3"><label for="bicycle-3"></label>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@
                 <span class="bicycle__price price">45 AED</span>
                 <div class="bicycle__button">
                   <button class="bicycle__help button--small" type="button"></button>
-                  <button class="bicycle__add button--small" type="button"></button>
+                  <input class="bicycle__add" type="checkbox" id="bicycle-4"><label for="bicycle-4"></label>
                 </div>
               </div>
             </div>
@@ -201,10 +201,10 @@
       </div>
       <ul class="product__list">
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
@@ -213,23 +213,25 @@
           <button class="product__button button--blue" type="button">ВЫБРАНО</button>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-          SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
           <h2 class="product__model model--busy">Городской велосипед Schwinn Traveler 20"</h2>
           <p class="product__price price  model--busy">90 AED/день</p>
-          <a href="#">Посмотреть свободные даты</a>
-          <button class="product__button button--busy" type="button">ЗАНЯТ</button>
+          <div class="busy__block">
+            <button class="free-date">Посмотреть свободные даты</button>
+            <button class="product__button button--busy" type="button">ЗАНЯТ</button>
+          </div>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
@@ -238,10 +240,10 @@
         <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
@@ -250,10 +252,10 @@
         <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
@@ -262,23 +264,25 @@
           <button class="product__button button--blue" type="button">ОТМЕНИТЬ ВЫБОР</button>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
           <h2 class="product__model">Городской велосипед Schwinn Traveler 20"</h2>
           <p class="product__price price price--busy">90 AED/день</p>
-          <a href="#">Посмотреть свободные даты</a>
-          <button class="product__button" type="button">ЗАНЯТ</button>
+          <div class="busy__block">
+            <button class="free-date">Посмотреть свободные даты</button>
+            <button class="product__button button--busy" type="button">ЗАНЯТ</button>
+          </div>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>
@@ -287,10 +291,10 @@
         <button class="product__button" type="button">ВЫБРАТЬ</button>
         </li>
         <li class="product__item">
-          <p class="product__brand">
-            <span class="product__size">20"</span>
-            SCHWINN
-          </p>
+          <div class="size-brand__container">
+            <p class="product__size">20"</p>
+            <p class="product__brand">SCHWINN</p>
+          </div>
           <div class="product__image">
             <img class="image__bicycle" src="img/type-of-bicycles.png" width="177" height="93" alt="Фото велосипеда">
           </div>

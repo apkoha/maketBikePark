@@ -122,7 +122,9 @@ body {
 
 .main-content,
 .choice-bicycles,
-.bicycle-model {
+.bicycle-model,
+.ride__content,
+.second-ride__content {
   position: relative;
   margin: 0 auto;
   width: 1240px;
@@ -130,7 +132,8 @@ body {
   border-radius: 20px;
 }
 
-.main-content::before {
+.main-content::before,
+.choice-bicycles::before {
   content: "";
   position: absolute;
   bottom: -17px;
@@ -384,7 +387,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   /*cursor: pointer;*/ /*срабатывет через раз*/
 /*}*/
 
-.choice-bicycles::before {
+.choice-bicycles::after,
+.bicycle-model::after {
   content: "";
   position: absolute;
   top: -17px;
@@ -461,6 +465,12 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   margin-right: 25px;
 }
 
+.bicycle__button {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+
 .button--small {
   width: 40px;
   height: 40px;
@@ -480,15 +490,45 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background-image: url("../img/question-mark.svg");
 }
 
+/*кнопка добавить*/
 .bicycle__add {
-  margin-left: 10px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.bicycle__add + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.bicycle__add:checked + label::before {
+  background-color: #297fff;
+  background-image: url("../img/checkmark.svg");
+}
+
+.bicycle__add + label::before {
+  content: "";
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #dde3eb;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-image: url("../img/plus-mark.svg");
 }
 
-.help-aluminium__button {
-  display: none;
+.help-aluminium__prompt {
+  /*display: none;*/
   position: absolute;
-  bottom: 37px;
+  bottom: 31px;
   left: 40px;
   width: 260px;
   height: 105px;
@@ -497,32 +537,32 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
 }
 
+/*не срабатывает правило! Почему?*/
+.help-aluminium__prompt:hover .bicycle__help--aluminum {
+  display: block;
+  background-color: #000;
+}
+
 .bicycle__help--aluminum:hover {
   background-color: #000; /*тестовый стиль*/
 }
 
-.bicycle__help--aluminum:hover .help-aluminium__button,
-.bicycle__help--aluminum:active .help-aluminium__button,
-.bicycle__help--aluminum:focus .help-aluminium__button {
-  display: block;
-} /*не работает. По нажатию на "?" должна быть подсказка*/
-
-.aluminium-button__text {
-  margin: 0px;
-  padding: 13px 12px 16px 12px;
-}
-
-.aluminium-text--arrow::before {
+.help-aluminium__prompt::before {
   content: "";
   display: block;
   position: absolute;
-  right: 90px;
+  right: 85px;
   top: -10px;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
   transform: rotate(45deg);
   box-shadow: 1px 1px 0px 0px rgba(221, 227, 235, 1) inset;
+}
+
+.aluminium-prompt__text {
+  margin: 0px;
+  padding: 13px 12px 16px 12px;
 }
 
 .choice-bicycles__button,
@@ -532,8 +572,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   transform: translate(-50%, 0);
   width: 260px;
   height: 60px;
-  margin-top: 42px;
-  margin-bottom: 46px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 19px 80px;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -587,23 +628,31 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 40px;
-  margin-left: 40px;
-  list-style: none;
+  margin: 0px 40px;
   padding: 0px;
+  list-style: none;
 }
 
 .product__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 260px;
   min-height: 361px;
-  margin-bottom: 40px;
+  margin-top: 40px;
   background-color: #ffffff;
   border-radius: 15px;
 }
 
+.size-brand__container {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+}
+
 .product__size {
+  margin: 0px;
+  padding: 16px 0px 15px 0px;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -613,9 +662,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .product__brand {
   margin: 0px;
-  padding-top: 16px;
-  padding-bottom: 15px;
-  padding-left: 24px;
+  padding: 16px 0px 15px 0px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -624,17 +671,13 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .product__image {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 230px;
   height: 140px;
   background-color: #f2f4f7;
   border-radius: 10px;
-}
-
-.image__bicycle {
-  display: block;
-  margin: 0 auto;
-  margin-top: 24px;
 }
 
 .product__model {
@@ -651,6 +694,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .product__price {
   margin: 0px;
+  align-self: stretch;
   padding-top: 11px;
   padding-right: 27px;
   padding-left: 22px;
@@ -674,9 +718,36 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.busy__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  margin-top: 16px;
+}
+
+.free-date {
+  width: 126px;
+  height: 40px;
+  padding: 5px 0px;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: #297fff;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
 .button--busy {
   width: 78px;
   height: 40px;
+  margin: 0px;
+  margin-right: 11px;
+  margin-left: 11px;
+  padding: 10px 9px;
   border: none;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
@@ -702,7 +773,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 /*Стилизация футера*/
 footer {
-  margin-top: 75px;
+  margin-top: 120px;
   min-width: 1240px;
   background-color: #272934;
   color: #ffffff;
@@ -831,7 +902,7 @@ footer {
   background-image: url("../img/instagram-icon.svg");
 }
 
-/*CSS страницы RULES*/
+/*CSS страницы RIDE, RULES*/
 .rules {
   width: 1240px;
   margin: 0 auto;
@@ -839,11 +910,17 @@ footer {
   background-color: #f2f4f7;
   border-radius: 20px;
 }
-.rules__tittle {
+
+.content-area {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.rules__tittle,
+.ride__tittle {
   margin: 0px;
   padding-top: 56px;
-  padding-right: 975px;
-  padding-left: 40px;
+  padding-right: 775px;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -854,8 +931,7 @@ footer {
 .rules__subtittle {
   margin: 0px;
   padding-top: 52px;
-  padding-right: 870px;
-  padding-left: 40px;
+  padding-right: 770px;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -868,7 +944,6 @@ footer {
   justify-content: space-between;
   width: 1160px;
   margin-right: 40px;
-  margin-left: 40px;
   padding-top: 30px;
 }
 
@@ -877,7 +952,10 @@ footer {
 }
 
 .column__text,
-.rules-damage__text {
+.rules-damage__text,
+.ride__text,
+.second-ride__text {
+  margin: 0px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -885,10 +963,8 @@ footer {
   color: #14233d;
 }
 
-.damage-text {
-  margin: 0px;
-  padding-right: 440px;
-  padding-left: 40px;
+.damage-text,
+.ride-text {
   padding-bottom: 46px;
 }
 
@@ -897,4 +973,86 @@ footer {
   padding-bottom: 38px;
 }
 
-/*CSS страницы RULES*/
+.second-ride-content__area {
+  margin-top: 34px;
+  margin-bottom: 323px;
+}
+
+.ride__subtittle,
+.second-ride__subtittle {
+  margin: 0px;
+  padding-top: 52px;
+  padding-right: 770px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+.ride-text--padding {
+  padding-top: 15px;
+}
+
+.ride-foto__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-bottom: 70px;
+}
+.foto-container {
+  width: 360px;
+  height: 262px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.second-foto__area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-ride__container {
+  width: 560px;
+}
+
+.second-foto__container {
+  width: 559px;
+  height: 262px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bottom-foto__area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+.bottom-foto__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+}
+
+.bottom__container {
+  width: 260px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bottom-ride__text {
+  margin: 0px;
+  padding-top: 29px;
+  padding-bottom: 65px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+/*CSS страницы RIDE, RULES*/
