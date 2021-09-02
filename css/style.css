@@ -16,14 +16,22 @@ body {
 .main-content,
 .choice-bicycles,
 .bicycle-model,
-.ride__content,
-.second-ride__content,
 .contacts__section {
   position: relative;
   margin: 0 auto;
   width: 1240px;
   background-color: #f2f4f7;
   border-radius: 20px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
 }
 
 .button--blue:hover {
@@ -45,29 +53,41 @@ body {
   color: #abb1c5;
 }
 
-.logo {
+/* начало CSS header */
+.header {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.top-line__logo {
+  margin-right: 34px;
   cursor: pointer;
   width: 68px;
   height: 42px;
   text-decoration: none;
 }
 
-.top-line {
+.header__top-line {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 60px;
   width: 1160px;
 }
 
-.nav {
+.header__nav {
+  margin-right: 97px;
+}
+
+.nav-list {
   display: flex;
+  justify-content: space-between;
+  width: 523px;
   list-style: none;
   padding: 0px;
 }
 
 .nav-link {
-  margin-left: 36px;
   text-decoration: none;
   color: #14233d;
   font-style: normal;
@@ -84,9 +104,15 @@ body {
   color: #297fff;
 }
 
+.header-button {
+  margin-right: 48px;
+}
+
 .header-button__list {
   display: flex;
+  justify-content: space-between;
   list-style: none;
+  width: 280px;
   margin: 0px;
   padding: 0px;
 }
@@ -96,7 +122,6 @@ body {
   display: block;
   width: 40px;
   height: 40px;
-  margin-left: 96px;
   padding: 0px;
   border: none;
   background-color: #ffffff;
@@ -116,22 +141,60 @@ body {
 
 .button__feedback {
   width: 200px;
-  height: 40px;
-  margin-left: 40px;
-  padding: 0px;
+  padding: 11px;
+  border: none;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  color: #ffffff;
+  background-color: #297fff;
 }
 
-.time-counter {
-  margin-left: 48px;
+.button__feedback:hover,
+.button__feedback:focus {
+  background-color: #005eff;
+}
+
+.header__clock {
   font-style: normal;
   font-weight: bold;
   font-size: 37px;
   line-height: 45px;
 }
+
+.clock__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.clock-item__separator {
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  /* 0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1.0;
+  }   
+} */
+}
+/* конец CSS header */
 
 .main-content::before,
 .choice-bicycles::before {
@@ -160,6 +223,12 @@ body {
 }
 
 .main-content__tittle {
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  top: 56px;
+  width: 549px;
+  height: 116px;
   margin: 0px;
   padding: 0px;
   font-style: normal;
@@ -300,6 +369,123 @@ body {
 }
 
 /*segmented control кнопки*/
+/* .flight-types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  height: 60px;
+  padding: 7px 6px;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.button__days {
+  width: 124px;
+  padding: 13px;
+  border: none;
+  background-color: #297fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.button__two-hours {
+  width: 124px;
+  padding: 13px;
+  border: none;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+} */
+
+.flight-types__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  height: 60px;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
+  /* box-sizing: border-box; */
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.flight-types {
+  display: flex;
+  max-width: 246px;
+  width: 100%;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin: 7px 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 10px;
+  color: #14233d;
+}
+
+.flight-types > input {
+  display: none;
+}
+
+.flight-types > input:checked + label {
+  color: #ffffff;
+}
+
+.flight-types > input:nth-of-type(1):checked ~ label:last-of-type:before {
+  transform: translateX(calc(0% + 0px));
+}
+
+.flight-types > input:nth-of-type(2):checked ~ label:last-of-type:before {
+  transform: translateX(calc(100% + 0px));
+}
+
+.flight-types label {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.flight-types label:last-of-type:before {
+  content: "";
+  display: block;
+  max-width: calc(50% - 0px);
+  margin: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(0);
+}
+
+.flight-types label {
+  padding: 9px 5px;
+  transition: color 250ms cubic-bezier(0, 0.95, 0.38, 0.98);
+}
+
+.flight-types label:before {
+  border-radius: 10px;
+  background: #297fff;
+  transition: all 250ms cubic-bezier(0, 0.95, 0.38, 0.98);
+}
 /*конец свойст segmented control кнопок*/
 
 .start-data__container {
@@ -322,7 +508,8 @@ body {
   height: 60px;
   padding: 19px 20px 19px 20px;
   background-color: #ffffff;
-  border: 1px solid #dde3eb;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
+  border: none;
   box-sizing: border-box;
   border-radius: 15px;
   font-style: normal;
@@ -385,8 +572,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   width: 20px;
   height: 20px;
   background: url("../img/vector.svg") no-repeat center center;
-  /*cursor: pointer;*/ /*срабатывет через раз*/
-/*}*/
+  cursor: pointer;
+  pointer-events: none;
+}*/
 
 .choice-bicycles::after,
 .bicycle-model::after {
@@ -527,7 +715,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .help-aluminium__prompt {
-  /*display: none;*/
+  display: none;
   position: absolute;
   bottom: 31px;
   left: 40px;
@@ -538,14 +726,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
 }
 
-/*не срабатывает правило! Почему?*/
-.help-aluminium__prompt:hover .bicycle__help--aluminum {
+.bicycle__help--aluminum:hover + .help-aluminium__prompt {
   display: block;
-  background-color: #000;
-}
-
-.bicycle__help--aluminum:hover {
-  background-color: #000; /*тестовый стиль*/
 }
 
 .help-aluminium__prompt::before {
@@ -564,6 +746,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .aluminium-prompt__text {
   margin: 0px;
   padding: 13px 12px 16px 12px;
+}
+
+.carbon-prompt__text {
+  display: none;
 }
 
 .choice-bicycles__button,
@@ -903,160 +1089,6 @@ footer {
   background-image: url("../img/instagram-icon.svg");
 }
 
-/*CSS страницы RIDE, RULES*/
-.rules {
-  width: 1240px;
-  margin: 0 auto;
-  margin-bottom: 172px;
-  background-color: #f2f4f7;
-  border-radius: 20px;
-}
-
-.content-area {
-  width: 1160px;
-  margin: 0 auto;
-}
-
-.rules__tittle,
-.ride__tittle,
-.contacts__tittle {
-  margin: 0px;
-  padding-top: 56px;
-  padding-right: 775px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 58px;
-  color: #14233d;
-}
-
-.rules__subtittle {
-  margin: 0px;
-  padding-top: 52px;
-  padding-right: 770px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 31px;
-  color: #14233d;
-}
-
-.rules__row {
-  display: flex;
-  justify-content: space-between;
-  width: 1160px;
-  margin-right: 40px;
-  padding-top: 30px;
-}
-
-.rules__column {
-  width: 360px;
-}
-
-.column__text,
-.rules-damage__text,
-.ride__text,
-.second-ride__text {
-  margin: 0px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
-  color: #14233d;
-}
-
-.damage-text,
-.ride-text {
-  padding-bottom: 46px;
-}
-
-.damage-text--padding {
-  padding-top: 31px;
-  padding-bottom: 38px;
-}
-
-.second-ride-content__area {
-  margin-top: 34px;
-  margin-bottom: 323px;
-}
-
-.ride__subtittle,
-.second-ride__subtittle {
-  margin: 0px;
-  padding-top: 52px;
-  padding-right: 770px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 22px;
-  color: #14233d;
-}
-
-.ride-text--padding {
-  padding-top: 15px;
-}
-
-.ride-foto__container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
-  padding-bottom: 70px;
-}
-.foto-container {
-  width: 360px;
-  height: 262px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.second-foto__area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.second-ride__container {
-  width: 560px;
-}
-
-.second-foto__container {
-  width: 559px;
-  height: 262px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.bottom-foto__area {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 36px;
-}
-
-.bottom-foto__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 260px;
-}
-
-.bottom__container {
-  width: 260px;
-  height: 200px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.bottom-ride__text {
-  margin: 0px;
-  padding-top: 29px;
-  padding-bottom: 65px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #14233d;
-}
-/*CSS страницы RIDE, RULES*/
 /*СSS страница CONTACTS*/
 .contacts-feedback__container {
   display: flex;
@@ -1202,3 +1234,240 @@ footer {
   border-radius: 20px;
   overflow: hidden;
 }
+
+/*начало CSS страницы RIDE*/
+.ride__section {
+  position: relative;
+  margin: 0 auto;
+  width: 1240px;
+}
+
+.section-area {
+  width: 1160px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 20px;
+  background-color: #f2f4f7;
+}
+
+.ride-section__area {
+  margin-bottom: 34px;
+  padding-top: 56px;
+  padding-bottom: 70px;
+}
+
+.section-area__tittle {
+  width: 350px;
+  margin: 0px;
+  margin-bottom: 43px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #14233d;
+}
+
+.section-area__subtittle,
+.content-area__subtittle {
+  width: 250px;
+  margin: 0px;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+.section-area__text,
+.section-area__second-text {
+  margin: 0px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+
+.section-area__foto-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.foto-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.foto-container__foto {
+  width: 360px;
+  height: 262px;
+}
+
+.ride-section__second-place {
+  padding-top: 66px;
+  padding-bottom: 65px;
+}
+
+.content-area__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 62px;
+}
+
+.content-area__text {
+  margin: 0px;
+  width: 560px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+
+.content-area__second-foto {
+  width: 559px;
+  height: 262px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.content-area__bottom-subtittle {
+  margin: 0px;
+  margin-bottom: 36px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+.content-area__bottom-place {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-area__bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+}
+
+.content-area__bottom-foto {
+  width: 260px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.content-area__bottom-text {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #14233d;
+}
+/*конец CSS страницы RIDE*/
+
+/*начало CSS страницы RULES*/
+.rules__section {
+  position: relative;
+  margin: 0 auto;
+  width: 1240px;
+}
+
+.rules-section__area {
+  padding-top: 56px;
+  padding-bottom: 46px;
+}
+
+.rules-section__tittle,
+.contacts__tittle {
+  width: 300px;
+  margin: 0px;
+  margin-bottom: 52px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #14233d;
+}
+
+.rules-section__subtittle {
+  width: 300px;
+  margin: 0px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 31px;
+  color: #14233d;
+}
+
+.rules-section__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 37px;
+}
+
+.rules-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 360px;
+  min-height: 135px;
+}
+
+.rules-column__tittle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.rules-column__text {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+
+.rules-section__second-subtittle {
+  width: 350px;
+  margin: 0px;
+  margin-bottom: 31px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 31px;
+  color: #14233d;
+}
+
+.rules-section__second-text {
+  width: 760px;
+  margin: 0px;
+  margin-bottom: 31px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+
+.rules-section__second-paragraph {
+  margin: 0px;
+  width: 760px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #14233d;
+}
+/*конец CSS страницы RULES*/
