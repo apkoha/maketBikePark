@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>BikePark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <div class="top-line">
-      <a class="logo" href="index.html">
-        <img class="logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
-        <h1 class="visualy-hidden">BikePark</h1>
+    <div class="header__top-line">
+      <a class="top-line__logo" href="index.html">
+        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
       </a>
-      <nav>
-        <ul class="nav">
+      <nav class="header__nav nav">
+        <ul class="nav-list">
           <li><a class="nav-link" href="#">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
@@ -25,56 +27,61 @@
           <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-button">
+      <div class="header-button button">
         <ul class="header-button__list">
           <li class="button-list__item">
             <button class="button__enter" type="button"></button>
           </li>
           <li class="button-list__item">
-            <button class="button__feedback button--blue" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+            <button class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
           </li>
         </ul>
       </div>
-      <div id="current_date_time_block" class="time-counter">12:00</div>
+      <div class="header__clock clock">
+        <ul class="clock__list">
+          <li class="clock-item" id="hours">00</li>
+          <li class="clock-item" id="separator">:</li>
+          <li class="clock-item" id="minutes">00</li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
-    <section class="rules">
-      <div class="rules-content__area content-area">
-        <h1 class="rules__tittle">Правила</h1>
-        <h2 class="rules__subtittle">Условия аренды</h2>
-        <div class="rules__row">
-          <div class="rules__column">
-            <span class="column__tittle type-text--grey">Срок аренды</span>
-            <p class="column__text">
+    <section class="rules__section">
+      <div class="rules-section__area section-area">
+        <h1 class="rules-section__tittle">Правила</h1>
+        <h2 class="rules-section__subtittle">Условия аренды</h2>
+        <div class="rules-section__row">
+          <div class="rules-section__column rules-column">
+            <span class="rules-column__tittle">Срок аренды</span>
+            <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
-          <div class="rules__column">
-            <span class="column__tittle type-text--grey">Срок аренды</span>
-            <p class="column__text">
+          <div class="rules-section__column rules-column">
+            <span class="rules-column__tittle">Срок аренды</span>
+            <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
-          <div class="rules__column">
-            <span class="column__tittle type-text--grey">Срок аренды</span>
-            <p class="column__text">
+          <div class="rules-section__column rules-column">
+            <span class="rules-column__tittle">Срок аренды</span>
+            <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
         </div>
-        <h2 class="rules__damdage rules__subtittle">Возмещение ущерба</h2>
-        <p class="rules-damage__text damage-text damage-text--padding">
+        <h2 class="rules-section__second-subtittle">Возмещение ущерба</h2>
+        <p class="rules-section__second-text">
           Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
           направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
           сфера
           нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
         </p>
-        <p class="rules-damage__text damage-text">
+        <p class="rules-section__second-paragraph">
           Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
           участниками в отношении поставленных задач.
         </p>
-      </div>
     </section>
   </main>
   <footer>

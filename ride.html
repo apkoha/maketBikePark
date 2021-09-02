@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>BikePark</title>
@@ -12,13 +13,13 @@
 </head>
 <body>
   <header class="header">
-    <div class="top-line">
-      <a class="logo" href="index.html">
-        <img class="logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
-        <h1 class="visualy-hidden">BikePark</h1>
+    <div class="header__top-line">
+      <a class="top-line__logo" href="index.html">
+        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
       </a>
-      <nav>
-        <ul class="nav">
+      <nav class="header__nav nav">
+        <ul class="nav-list">
           <li><a class="nav-link" href="#">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
@@ -26,93 +27,83 @@
           <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-button">
+      <div class="header-button button">
         <ul class="header-button__list">
           <li class="button-list__item">
             <button class="button__enter" type="button"></button>
           </li>
           <li class="button-list__item">
-            <button class="button__feedback button--blue" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+            <button class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
           </li>
         </ul>
       </div>
-      <div id="current_date_time_block" class="time-counter">12:00</div>
+      <div class="header__clock clock">
+        <ul class="clock__list">
+          <li class="clock-item" id="hours">00</li>
+          <li class="clock-item" id="separator">:</li>
+          <li class="clock-item" id="minutes">00</li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
-    <section class="ride__section ride">
-      <div class="ride__content">
-        <div class="ride-content__area content-area">
-          <h1 class="ride__tittle">Где кататься</h1>
-          <h2 class="ride__subtittle">Подзаголовок</h2>
-          <p class="ride__text ride-text ride-text--padding">
-            Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
-            направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
-            сфера
-            нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
-          </p>
-          <p class="ride__text ride-text ride-text--nopadding">
-            Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
-            участниками в отношении поставленных задач.
-          </p>
-          <div class="ride-foto__container">
-            <div class="foto-container">
-              <img src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
-            </div>
-            <div class="foto-container">
-              <img src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
-            </div>
-            <div class="foto-container">
-              <img src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
-            </div>
-          </div>
+    <section class="ride__section">
+      <div class="ride-section__area section-area">
+        <h1 class="section-area__tittle">Где кататься</h1>
+        <h2 class="section-area__subtittle">Подзаголовок</h2>
+        <p class="section-area__text">
+          Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
+          направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
+          сфера
+          нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
+        </p>
+        <p class="section-area__second-text">
+          Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
+          участниками в отношении поставленных задач.
+        </p>
+        <div class="section-area__foto-container foto-container">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
         </div>
       </div>
-      <div class="second-ride__content">
-        <div class="second-ride-content__area content-area">
-          <h2 class="second-ride__subtittle">Подзаголовок</h2>
-          <div class="second-foto__area">
-            <div class="second-ride__container">
-              <p class="second-ride__text ride-text--padding">
-                Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
-                направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
-                сфера
-                нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
-                <br>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную
-                роль
-                в формировании
-              </p>
+      <div class="ride-section__second-place second-place section-area">
+        <div class="second-place__content-area">
+          <h2 class="content-area__subtittle">Подзаголовок</h2>
+          <div class="content-area__container">
+            <p class="content-area__text">
+              Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
+              направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
+              сфера
+              нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
+              <br>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную
+              роль
+              в формировании
+            </p>
+            <img class="content-area__second-foto" src="img/second-ride-place.jpg" alt="Фото где кататься" class="second-ride__foto" wght="559" height="262">
+          </div>
+          <h2 class="content-area__bottom-subtittle">Заголовок</h2>
+          <div class="content-area__bottom-place">
+            <div class="content-area__bottom-container">
+              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
+              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
             </div>
-            <div class="second-foto__container">
-              <img src="img/second-ride-place.jpg" alt="Фото где кататься" class="second-ride__foto" wght="559" height="262">
+            <div class="content-area__bottom-container">
+              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
+                wght="260" height="200">
+              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
+            </div>
+            <div class="content-area__bottom-container">
+              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
+                wght="260" height="200">
+              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
+            </div>
+            <div class="content-area__bottom-container">
+              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
+                wght="260" height="200">
+              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
             </div>
           </div>
-          <h2 class="second-ride__subtittle">Заголовок</h2>
-          <div class="bottom-foto__area">
-            <div class="bottom-foto__container">
-              <div class="bottom__container">
-                <img src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
-              </div>
-              <p class="bottom-ride__text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="bottom-foto__container">
-              <div class="bottom__container">
-                <img src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
-              </div>
-              <p class="bottom-ride__text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="bottom-foto__container">
-              <div class="bottom__container">
-                <img src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
-              </div>
-              <p class="bottom-ride__text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="bottom-foto__container">
-              <div class="bottom__container">
-                <img src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
-              </div>
-              <p class="bottom-ride__text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
         </div>
       </div>
     </section>

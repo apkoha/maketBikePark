@@ -11,39 +11,43 @@
 </head>
 <body>
   <header class="header">
-    <div class="top-line">
-      <a class="logo" href="index.html">
-        <img class="logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
-        <h1 class="visualy-hidden">BikePark</h1>
+    <div class="header__top-line">
+      <a class="top-line__logo" href="index.html">
+        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
       </a>
-      <nav>
-        <ul class="nav">
+      <nav class="header__nav nav">
+        <ul class="nav-list">
           <li><a class="nav-link" href="#">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
           <li><a class="nav-link" href="ride.html">Где кататься</a></li>
-          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
+          <li><a class="nav-link" href="#">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-button">
+      <div class="header-button button">
         <ul class="header-button__list">
           <li class="button-list__item">
             <button class="button__enter" type="button"></button>
           </li>
           <li class="button-list__item">
-            <button class="button__feedback button--blue" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+            <button class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
           </li>
         </ul>
       </div>
-      <div id="current_date_time_block" class="time-counter">12:00</div>
+      <div class="header__clock clock">
+        <ul class="clock__list">
+          <li class="clock-item" id="hours">00</li>
+          <li class="clock-item clock-item__separator" id="separator">:</li>
+          <li class="clock-item" id="minutes">00</li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
     <section class="main-content">
       <div class="main-content__container">
-        <div class="content-tittle__container">
-          <h2 class="main-content__tittle">Аренда велосипедов<br>с доставкой</h2>
-        </div>
+        <h2 class="main-content__tittle">Аренда велосипедов<br>с доставкой</h2>
         <ul class="main-content__list">
           <li class="content__images">
             <div class="content__container container--helmet">
@@ -69,21 +73,24 @@
         <li class="data-list__item">
           <div class="rent-type__container">
             <p class="rent-type__text type-text--grey">Типа аренды</p>
-            <div class="flight-types">
-              <input type="radio" name="flight-type" value="По дням" id="По дням" />
-              <label for="По дням">
-                По дням
-              </label>
-              <input type="radio" name="flight-type" value="2 часа" id="2 часа" checked />
-              <label for="2 часа">
-                2 часа
-              </label>
+            <!-- <div class="flight-types">
+              <button class="flight__button button button__days">По дням</button>
+              <button class="flight__button button button__two-hours">2 часа</button>
+            </div> -->
+            <div class="flight-types__container">
+              <div class="flight-types">
+                <input type="radio" name="flight-type" value="coach" id="coach" />
+                <label for="coach">По дням</label>
+                <input type="radio" name="flight-type" value="business" id="business" checked />
+                <label for="business">2 часа</label>
+              </div>
             </div>
           </div>
         </li>
         <li class="data-list__item type-text--grey">
           <div class="rent-type__container start-data__container data-item--vector">
             <p class="start-data__text type-text--grey">Дата и время начала</p>   
+            <!-- <label for="Дата и время начала">Дата и время начала</label> -->
             <input class="data-counter" type="datetime-local" name="" id="">
           </div>
         </li>
@@ -96,7 +103,6 @@
         <li class="data-list__item type-text--grey">
           <div class="rent-type__container data-item--vector">
             <p class="delivery-type__text type-text--grey">Доставка</p>
-            <!--класс и name могут ли быть одинаковыми?-->
             <select name="delivery-type" id="" class="delivery-type__option">
               <option class="delivery-type">По адресу</option>
               <option class="delivery-type">Самовывоз</option>
@@ -117,15 +123,15 @@
                 <span class="bicycle__price price">90 AED</span>
                 <div class="bicycle__button">
                   <button class="bicycle__help button--small bicycle__help--aluminum" type="button"></button>
+                  <div class="help-aluminium__prompt">
+                    <p class="aluminium-prompt__text type-text--grey">
+                      Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
+                    </p>
+                  </div>
                   <input class="bicycle__add" type="checkbox" id="bicycle-1"><label for="bicycle-1"></label>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="help-aluminium__prompt">
-            <p class="aluminium-prompt__text type-text--grey">
-              Легкие, надежные и легко управляются. Возможны вибрации из-за неровностей дороги.
-            </p>
           </div>
         </li>
         <li class="bicycles-list__item bicycle">
@@ -137,6 +143,11 @@
                 <span class="bicycle__price price">180 AED</span>
                 <div class="bicycle__button">
                   <button class="bicycle__help button--small" type="button"></button>
+                  <div class="help-carbon__prompt">
+                    <p class="carbon-prompt__text type-text--grey">
+                      Легкие и хорошо заглушают вибрацию неровностей. Хорошо подходят для крупных людей – для мало весящих езда будет жесткой.
+                    </p>
+                  </div>
                   <input class="bicycle__add" type="checkbox" id="bicycle-2"><label for="bicycle-2"></label>
                 </div>
               </div>
@@ -315,7 +326,7 @@
         <ul class="footer-nav">
           <li><a class="footer-nav__link" href="rules.html">Правила</a></li>
           <li><a class="footer-nav__link" href="#">Отзывы</a></li>
-          <li><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="footer-nav__link" href="#">Контакты</a></li>
           <li><a class="footer-nav__link" href="#">Обратная связь</a></li>
         </ul>
       </div>
