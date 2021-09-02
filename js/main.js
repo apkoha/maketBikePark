@@ -1,23 +1,12 @@
-    /* функция добавления ведущих нулей */
-    /* (если число меньше десяти, перед числом добавляем ноль) */
-    function zero_first_format(value)
-    {
-        if (value < 10)
-        {
-            value='0'+value;
-        }
-        return value;
-    }
+window.onload = function() {
+  setInterval(function() {
 
-    /* функция получения текущей даты и времени */
-    function date_time()
-    {
-        var current_datetime = new Date();
-        var hours = zero_first_format(current_datetime.getHours());
-        var minutes = zero_first_format(current_datetime.getMinutes());
+    // Minutes
+    var minutes = new Date().getMinutes();
+    document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
 
-        return hours+":"+minutes;
-    }
-
-    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
-    document.getElementById('current_date_time_block').innerHTML = date_time();
+    // Hours
+    var hours = new Date().getHours();
+    document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+  }, 1000);
+}
