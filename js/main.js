@@ -10,3 +10,29 @@ window.onload = function() {
     document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
   }, 1000);
 }
+
+
+
+// feedback-form__close-button формы "Обратная связь"
+var button = document.querySelector(".button__feedback");
+var popup = document.querySelector(".feedback-section");
+var close = document.querySelector(".feedback-form__close-button");
+
+button.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("feedback-section--show");
+});
+
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("feedback-section--show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27)  {
+    if (popup.classList.contains("feedback-section--show")) {
+      evt.preventDefault();
+      popup.classList.remove("feedback-section--show");
+    }
+  }
+}); 

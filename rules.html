@@ -11,6 +11,7 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <div class="header__top-line">
@@ -27,7 +28,7 @@
           <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-button button">
+      <div class="header-button">
         <ul class="header-button__list">
           <li class="button-list__item">
             <button class="button__enter" type="button"></button>
@@ -40,39 +41,39 @@
       <div class="header__clock clock">
         <ul class="clock__list">
           <li class="clock-item" id="hours">00</li>
-          <li class="clock-item" id="separator">:</li>
+          <li class="clock-item clock-item__separator" id="separator">:</li>
           <li class="clock-item" id="minutes">00</li>
         </ul>
       </div>
     </div>
   </header>
   <main>
-    <section class="rules__section">
+    <section class="rules__section rules-section">
       <div class="rules-section__area section-area">
-        <h1 class="rules-section__tittle">Правила</h1>
-        <h2 class="rules-section__subtittle">Условия аренды</h2>
+        <h2 class="rules-section__tittle">Правила</h2>
+        <h3 class="rules-section__subtittle">Условия аренды</h3>
         <div class="rules-section__row">
           <div class="rules-section__column rules-column">
-            <span class="rules-column__tittle">Срок аренды</span>
+            <h4 class="rules-column__tittle">Срок аренды</h4>
             <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
           <div class="rules-section__column rules-column">
-            <span class="rules-column__tittle">Срок аренды</span>
+            <h4 class="rules-column__tittle">Срок аренды</h4>
             <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
           <div class="rules-section__column rules-column">
-            <span class="rules-column__tittle">Срок аренды</span>
+            <h4 class="rules-column__tittle">Срок аренды</h4>
             <p class="rules-column__text">
               Минимальный срок аренды велосипеда составляет 1 день. При брони от 5 дней действует скидка 10%
             </p>
           </div>
         </div>
-        <h2 class="rules-section__second-subtittle">Возмещение ущерба</h2>
-        <p class="rules-section__second-text">
+        <h3 class="rules-section__second-subtittle">Возмещение ущерба</h3>
+        <p class="rules-section__second-paragraph">
           Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
           направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
           сфера
@@ -82,38 +83,46 @@
           Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
           участниками в отношении поставленных задач.
         </p>
+      </div>
     </section>
   </main>
   <footer>
-    <div class="footer-container">
-      <div class="footer-top-line">
+    <div class="footer__container footer-container">
+      <div class="footer-container__top-line top-line">
         <a class="top-line__link" href="index.html">
-          <h2 class="fotter-tittle">Аренда велосипедов</h2>
+          <h2 class="top-line__tittle">Аренда велосипедов</h2>
         </a>
-        <ul class="footer-nav">
-          <li><a class="footer-nav__link" href="rules.html">Правила</a></li>
-          <li><a class="footer-nav__link" href="#">Отзывы</a></li>
-          <li><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
-          <li><a class="footer-nav__link" href="#">Обратная связь</a></li>
+        <ul class="footer__nav footer-nav">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Отзывы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
         </ul>
       </div>
-      <ul class="type-list">
-        <li class="type-list__item"><a class="type-list__link" href="#">Алюминий</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Карбон</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Горные/городские</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Городские эконом</a></li>
+      <ul class="footer__list footer-list">
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Алюминий</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Карбон</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Горные/городские</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Городские эконом</a>
+        </li>
       </ul>
-      <div class="footer-second-line">
-        <p class="copyring">&copy; BikePark, 2021</p>
-        <a class="policy" href="#">Политика конфиденциальности</a>
-        <ul class="social-list">
-          <li><a class="social__link facebook-link" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social__link instagram-link" href="#" aria-label="Инстаграм"></a></li>
+      <div class="footer__copyring-social copyring-social">
+        <p class="copyring-social__text">&copy; BikePark, 2021</p>
+        <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
+        <ul class="copyring-social__list social-list">
+          <li><a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a></li>
+          <li><a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a></li>
         </ul>
       </div>
     </div>
   </footer>
   <script src="js/main.js"></script>
   </body>
-  
   </html>

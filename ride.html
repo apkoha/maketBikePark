@@ -11,6 +11,7 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <div class="header__top-line">
@@ -27,7 +28,7 @@
           <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header-button button">
+      <div class="header-button">
         <ul class="header-button__list">
           <li class="button-list__item">
             <button class="button__enter" type="button"></button>
@@ -40,7 +41,7 @@
       <div class="header__clock clock">
         <ul class="clock__list">
           <li class="clock-item" id="hours">00</li>
-          <li class="clock-item" id="separator">:</li>
+          <li class="clock-item clock-item__separator" id="separator">:</li>
           <li class="clock-item" id="minutes">00</li>
         </ul>
       </div>
@@ -49,95 +50,100 @@
   <main>
     <section class="ride__section">
       <div class="ride-section__area section-area">
-        <h1 class="section-area__tittle">Где кататься</h1>
-        <h2 class="section-area__subtittle">Подзаголовок</h2>
+        <h2 class="section-area__tittle">Где кататься</h2>
+        <h3 class="section-area__subtittle">Подзаголовок</h3>
         <p class="section-area__text">
           Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
           направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
           сфера
           нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
         </p>
-        <p class="section-area__second-text">
+        <p class=".section-area__text">
           Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
           участниками в отношении поставленных задач.
         </p>
         <div class="section-area__foto-container foto-container">
-          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
-          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
-          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" class="ride__foto" wght="360" height="262">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" width="360" height="262">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" width="360" height="262">
+          <img class="foto-container__foto" src="img/ride-place.jpg" alt="Фото где кататься" width="360" height="262">
         </div>
       </div>
       <div class="ride-section__second-place second-place section-area">
-        <div class="second-place__content-area">
-          <h2 class="content-area__subtittle">Подзаголовок</h2>
-          <div class="content-area__container">
-            <p class="content-area__text">
-              Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
-              направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
-              сфера
-              нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
-              <br>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную
-              роль
-              в формировании
-            </p>
-            <img class="content-area__second-foto" src="img/second-ride-place.jpg" alt="Фото где кататься" class="second-ride__foto" wght="559" height="262">
+        <h3 class="second-place__subtittle">Подзаголовок</h3>
+        <div class="second-place__container">
+          <p class="second-place__text">
+            Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
+            направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
+            сфера
+            нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
+            <br>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную
+            роль
+            в формировании
+          </p>
+          <img class="second-place__second-foto" src="img/second-ride-place.jpg" alt="Фото где кататься" width="559" height="262">
+        </div>
+        <h3 class="second-place__subtittle">Заголовок</h3>
+        <div class="second-place__bottom-place">
+          <div class="second-place__bottom-container">
+            <img class="second-place__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" width="260" height="200">
+            <p class="second-place__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
           </div>
-          <h2 class="content-area__bottom-subtittle">Заголовок</h2>
-          <div class="content-area__bottom-place">
-            <div class="content-area__bottom-container">
-              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto" wght="260" height="200">
-              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="content-area__bottom-container">
-              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
-                wght="260" height="200">
-              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="content-area__bottom-container">
-              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
-                wght="260" height="200">
-              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
-            <div class="content-area__bottom-container">
-              <img class="content-area__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" class="bottom-foto"
-                wght="260" height="200">
-              <p class="content-area__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
-            </div>
+          <div class="second-place__bottom-container">
+            <img class="second-place__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" width="260"
+              height="200">
+            <p class="second-place__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
+          </div>
+          <div class="second-place__bottom-container">
+            <img class="second-place__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" width="260"
+              height="200">
+            <p class="second-place__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
+          </div>
+          <div class="second-place__bottom-container">
+            <img class="second-place__bottom-foto" src="img/bottom-ride-place.jpg" alt="Фото где кататься" width="260"
+              height="200">
+            <p class="second-place__bottom-text">Товарищи! постоянный количественный рост и сфера нашей активности позволяет</p>
           </div>
         </div>
       </div>
     </section>
   </main>
   <footer>
-    <div class="footer-container">
-      <div class="footer-top-line">
+    <div class="footer__container footer-container">
+      <div class="footer-container__top-line top-line">
         <a class="top-line__link" href="index.html">
-          <h2 class="fotter-tittle">Аренда велосипедов</h2>
+          <h2 class="top-line__tittle">Аренда велосипедов</h2>
         </a>
-        <ul class="footer-nav">
-          <li><a class="footer-nav__link" href="rules.html">Правила</a></li>
-          <li><a class="footer-nav__link" href="#">Отзывы</a></li>
-          <li><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
-          <li><a class="footer-nav__link" href="#">Обратная связь</a></li>
+        <ul class="footer__nav footer-nav">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Отзывы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
         </ul>
       </div>
-      <ul class="type-list">
-        <li class="type-list__item"><a class="type-list__link" href="#">Алюминий</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Карбон</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Горные/городские</a></li>
-        <li class="type-list__item"><a class="type-list__link" href="#">Городские эконом</a></li>
+      <ul class="footer__list footer-list">
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Алюминий</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Карбон</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Горные/городские</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Городские эконом</a>
+        </li>
       </ul>
-      <div class="footer-second-line">
-        <p class="copyring">&copy; BikePark, 2021</p>
-        <a class="policy" href="#">Политика конфиденциальности</a>
-        <ul class="social-list">
-          <li><a class="social__link facebook-link" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social__link instagram-link" href="#" aria-label="Инстаграм"></a></li>
+      <div class="footer__copyring-social copyring-social">
+        <p class="copyring-social__text">&copy; BikePark, 2021</p>
+        <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
+        <ul class="copyring-social__list social-list">
+          <li><a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a></li>
+          <li><a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a></li>
         </ul>
       </div>
     </div>
   </footer>
   <script src="js/main.js"></script>
   </body>
-  
   </html>

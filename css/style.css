@@ -25,22 +25,18 @@ body {
 }
 
 .button {
+  border: none;
   cursor: pointer;
   border-radius: 10px;
+  background-color: #297fff;
+  color: #ffffff;
 }
 
-.button:hover,
-.button:focus {
-  outline: none;
-}
-
-.button--blue:hover {
+.button:hover {
   background-color: #005eff;
 }
 
-.button--blue:active,
-.button--blue:focus {
-  background-color: #297fff;
+.button:focus {
   outline: none;
 }
 
@@ -148,12 +144,6 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
-  background-color: #297fff;
-}
-
-.button__feedback:hover,
-.button__feedback:focus {
-  background-color: #005eff;
 }
 
 .header__clock {
@@ -726,7 +716,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
 }
 
-.bicycle__help--aluminum:hover + .help-aluminium__prompt {
+.bicycle__help--aluminum:focus + .help-aluminium__prompt {
   display: block;
 }
 
@@ -769,6 +759,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 /*Секция с моделями велосипедов*/
+.card__product {
+  margin-bottom: 172px;
+}
+
 .model__brand-size {
   display: flex;
   justify-content: flex-start;
@@ -902,7 +896,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
   background-color: #ffffff;
   color: #297fff;
-  cursor: pointer;
 }
 
 .busy__block {
@@ -940,38 +933,24 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
   background-color: #ffffff;
   color: #abb1c5;
-  cursor: pointer;
+  cursor: auto;
 }
 
-.product__button:focus,
-.product__button:active,
-.button--busy:focus,
-.button--busy:active {
-  outline: none;
-}
-
-.button--blue {
-  cursor: pointer;
-  background-color: #297fff;
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
-/*Стилизация футера*/
+/* Стилизация футера */
 footer {
-  margin-top: 120px;
   min-width: 1240px;
   background-color: #272934;
   color: #ffffff;
+  padding-top: 53px;
+  padding-bottom: 55px;
 }
 
 .footer-container {
-  width: 1240px;
+  width: 1160px;
   margin: 0 auto;
 }
 
-.footer-top-line {
+.top-line {
   display: flex;
   justify-content: space-between;
 }
@@ -981,59 +960,67 @@ footer {
   color: inherit;
 }
 
-.top-line__link:hover,
-.footer-nav__link:hover,
-.type-list__link:hover,
-.policy:hover {
-  color: #005eff;
-}
-
-.top-line__link:active,
-.footer-nav__link:active,
-.type-list__link:active,
-.policy:active {
-  color: #297fff;
-}
-
-.fotter-tittle {
-  margin-top: 52px;
-  margin-left: 40px;
+.top-line__tittle {
+  margin: 0px;
+  margin-bottom: 26px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
 }
 
-.footer-nav {
+.top-line__tittle:hover,
+.footer-nav__link:hover,
+.footer-list__link:hover,
+.copyring-social__link:hover {
+  color: #005eff;
+}
+
+.footer__nav {
   display: flex;
   list-style: none;
-  margin-top: 52px;
+  margin: 0px;
   padding: 0px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer-nav__item {
+  margin-right: 46px;
+}
+
+.footer-nav__item:last-child {
+  margin-right: 0px;
 }
 
 .footer-nav__link {
   text-decoration: none;
   color: inherit;
-  margin-right: 48px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
 }
 
-.type-list {
+.footer-list {
   list-style: none;
   margin: 0px;
-  margin-top: 12px;
   padding: 0px;
 }
 
-.type-list__item {
+.footer__list {
+  margin-bottom: 44px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #f2f4f7;
+}
+
+.footer-list__item {
   margin-bottom: 8px;
 }
 
-.type-list__link {
-  margin-left: 40px;
+.footer-list__link {
   text-decoration: none;
   color: inherit;
   font-style: normal;
@@ -1042,23 +1029,27 @@ footer {
   line-height: 24px;
 }
 
-.footer-second-line {
+.copyring-social {
   display: flex;
   justify-content: flex-start;
-  margin-top: 24px;
-  margin-bottom: 66px;
-  margin-left: 40px;
+  align-items: baseline;
 }
 
-.copyring {
+.footer__copyring-social {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #f2f4f7;
+}
+
+.copyring-social__text {
   margin: 0px;
-  margin-top: 20px;
-  margin-bottom: 55px;
+  margin-right: 150px;
 }
 
-.policy {
-  margin-left: 150px;
-  margin-top: 20px;
+.copyring-social__link {
+  margin-right: 452px;
   text-decoration: none;
   color: inherit;
 }
@@ -1067,12 +1058,14 @@ footer {
   display: flex;
   list-style: none;
   margin: 0px;
-  margin-right: 45px;
-  margin-left: 500px;
   padding: 0px;
 }
 
-.social__link {
+.copyring-social__list {
+  margin-right: 8px;
+}
+
+.social-list__link {
   display: block;
   width: 32px;
   height: 32px;
@@ -1080,20 +1073,40 @@ footer {
   background-position: center center;
 }
 
-.facebook-link {
+.facebook--link {
+  margin-right: 29px;
   background-image: url("../img/fb-icon.svg");
 }
 
-.instagram-link {
-  margin-left: 32px;
+.instagram--link {
   background-image: url("../img/instagram-icon.svg");
 }
+/*Конец стилизация футера*/
 
-/*СSS страница CONTACTS*/
-.contacts-feedback__container {
+/* начало СSS страницы CONTACTS */
+.contacts__section {
+  margin-bottom: 120px;
+}
+
+.contacts__area {
+  padding-top: 56px;
+  padding-bottom: 70px;
+}
+
+.contacts-area__tittle {
+  width: 300px;
+  margin: 0px;
+  margin-bottom: 52px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #14233d;
+}
+
+.contacts-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 42px;
 }
 
 .contacts__container {
@@ -1101,10 +1114,20 @@ footer {
   flex-direction: column;
 }
 
-.contacts__phone,
-.feedback-captoin__text {
+.contacts-container__caption {
   margin: 0px;
-  padding: 10px 10px 0px 0px;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.contacts-container__phone,
+.feedback-container__text {
+  margin: 0px;
+  margin-bottom: 30px;
   text-decoration: none;
   font-style: normal;
   font-weight: 600;
@@ -1113,19 +1136,15 @@ footer {
   color: #14233d;
 }
 
-.contacts__phone:hover,
-.contacts__e-mail:hover {
+.contacts-container__phone:hover,
+.contacts-container__e-mail:hover {
   color: #005eff;
 }
 
-.contacts__caption {
-  padding: 30px 10px 0px 0px;
-}
-
-.contacts__e-mail,
-.caption__text {
+.contacts-container__e-mail,
+.contacts-container__text {
   margin: 0px;
-  padding: 10px 10px 0px 0px;
+  margin-bottom: 10px;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -1134,15 +1153,17 @@ footer {
   color: #14233d;
 }
 
-.feedback__container {
+.contacts-area__feedback-container {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.contacts__input {
-  width: 540px;
-  padding: 19px 0px 19px 20px;
+.feedback-container__input,
+.form-container__input {
+  width: 520px;
+  margin-bottom: 20px;
+  padding: 19px 20px 19px 20px;
   border-radius: 15px;
   border: none;
   box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
@@ -1153,22 +1174,17 @@ footer {
   color: #737b98;
 }
 
-.contacts__input:focus {
+.feedback-container__input:focus,
+.form-container__input {
   outline: none;
 }
 
-.contacts__input--name {
-  margin-top: 35px;
-}
-
-.contacts__input--number {
-  margin-top: 20px;
-}
-
-.personal-data__container {
+.feedback-container__personal-data,
+.form-container__personal-data {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  width: 560px;
+  margin-bottom: 21px;
 }
 
 /*Чекбокс малый 32х32*/
@@ -1195,11 +1211,11 @@ footer {
 .checkbox--small + label::before {
   content: "";
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #dde3eb;
+  box-shadow: 0px 0px 0px 1px rgba(221, 227, 235, 1) inset;
   border-radius: 10px;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -1208,7 +1224,7 @@ footer {
 
 .personal-data__offer {
   margin: 0px;
-  padding: 5px 110px 5px 15px;
+  margin-left: 15px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1216,9 +1232,9 @@ footer {
   color: #14233d;
 }
 
-.contacts-send__button {
+.contacts-section__send-button {
   width: 560px;
-  margin-top: 21px;
+  margin-bottom: 60px;
   padding: 19px 200px 19px 200px;
   font-style: normal;
   font-weight: bold;
@@ -1226,16 +1242,15 @@ footer {
   line-height: 22px;
 }
 
-.contacts-map__container {
+.contacts__section__map-container {
   width: 1160px;
   height: 595px;
-  margin-top: 60px;
-  padding-bottom: 70px;
   border-radius: 20px;
   overflow: hidden;
 }
+/* конец СSS страницы CONTACTS */
 
-/*начало CSS страницы RIDE*/
+/* начало CSS страницы RIDE */
 .ride__section {
   position: relative;
   margin: 0 auto;
@@ -1269,7 +1284,7 @@ footer {
 }
 
 .section-area__subtittle,
-.content-area__subtittle {
+.second-place__subtittle {
   width: 250px;
   margin: 0px;
   margin-bottom: 15px;
@@ -1280,8 +1295,7 @@ footer {
   color: #14233d;
 }
 
-.section-area__text,
-.section-area__second-text {
+.section-area__text {
   margin: 0px;
   margin-bottom: 24px;
   font-weight: 500;
@@ -1295,29 +1309,27 @@ footer {
   justify-content: space-between;
 }
 
-.foto-container {
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 .foto-container__foto {
   width: 360px;
   height: 262px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .ride-section__second-place {
   padding-top: 66px;
   padding-bottom: 65px;
+  margin-bottom: 120px;
 }
 
-.content-area__container {
+.second-place__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 62px;
 }
 
-.content-area__text {
+.second-place__text {
   margin: 0px;
   width: 560px;
   font-style: normal;
@@ -1327,43 +1339,34 @@ footer {
   color: #14233d;
 }
 
-.content-area__second-foto {
+.second-place__second-foto {
   width: 559px;
   height: 262px;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.content-area__bottom-subtittle {
-  margin: 0px;
-  margin-bottom: 36px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 22px;
-  color: #14233d;
-}
-
-.content-area__bottom-place {
+.second-place__bottom-place {
   display: flex;
   justify-content: space-between;
 }
 
-.content-area__bottom-container {
+.second-place__bottom-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 260px;
 }
 
-.content-area__bottom-foto {
+.second-place__bottom-foto {
   width: 260px;
   height: 200px;
   border-radius: 20px;
   overflow: hidden;
+  margin-bottom: 29px;
 }
 
-.content-area__bottom-text {
+.second-place__bottom-text {
   margin: 0px;
   font-style: normal;
   font-weight: 500;
@@ -1374,10 +1377,14 @@ footer {
 /*конец CSS страницы RIDE*/
 
 /*начало CSS страницы RULES*/
-.rules__section {
+.rules-section {
   position: relative;
   margin: 0 auto;
   width: 1240px;
+}
+
+.rules__section {
+  margin-bottom: 120px;
 }
 
 .rules-section__area {
@@ -1385,8 +1392,7 @@ footer {
   padding-bottom: 46px;
 }
 
-.rules-section__tittle,
-.contacts__tittle {
+.rules-section__tittle {
   width: 300px;
   margin: 0px;
   margin-bottom: 52px;
@@ -1415,14 +1421,13 @@ footer {
 }
 
 .rules-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 360px;
   min-height: 135px;
 }
 
 .rules-column__tittle {
+  margin: 0px;
+  margin-bottom: 13px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1450,17 +1455,6 @@ footer {
   color: #14233d;
 }
 
-.rules-section__second-text {
-  width: 760px;
-  margin: 0px;
-  margin-bottom: 31px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
-  color: #14233d;
-}
-
 .rules-section__second-paragraph {
   margin: 0px;
   width: 760px;
@@ -1470,4 +1464,92 @@ footer {
   line-height: 25px;
   color: #14233d;
 }
+
+.rules-section__second-paragraph + .rules-section__second-paragraph {
+  margin-top: 31px;
+}
 /*конец CSS страницы RULES*/
+
+/* начало Формы "Обратная связь" */
+/* работает только на главной странице */
+.feedback-section {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.feedback-section--show {
+  display: block;
+}
+
+.feedback-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.feedback__form {
+  width: 560px;
+  height: 372px;
+  padding: 54px 40px 60px 40px;
+}
+
+.form-container__text {
+  margin: 0px;
+  margin-bottom: 37px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 31px;
+  color: #14233d;
+}
+
+.feedback-form--send-button {
+  margin-bottom: 0px;
+}
+
+.feedback-form__close-button {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  right: -50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.feedback-form__close-button:before,
+.feedback-form__close-button::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  width: 25px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.feedback-form__close-button:before {
+  transform: rotate(135deg);
+}
+
+.feedback-form__close-button {
+  background-color: transparent;
+}
+/* конец Формы "Обратная связь" */
