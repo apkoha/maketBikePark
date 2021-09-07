@@ -18,7 +18,7 @@
       </a>
       <nav class="header__nav nav">
         <ul class="nav-list">
-          <li><a class="nav-link" href="#">О нас</a></li>
+          <li><a class="nav-link" href="about.html">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
           <li><a class="nav-link" href="ride.html">Где кататься</a></li>
@@ -317,7 +317,7 @@
       <button class="button__further button" type="button">Далее</button>
     </section>
   </main>
-  <footer>
+  <footer class="footer__basic foter-basic">
     <div class="footer__container footer-container">
       <div class="footer-container__top-line top-line">
         <a class="top-line__link" href="index.html">
@@ -348,32 +348,37 @@
         <p class="copyring-social__text">&copy; BikePark, 2021</p>
         <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
         <ul class="copyring-social__list social-list">
-          <li><a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a></li>
+          <li class="social-list__item social-list__item--facebook">
+            <a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a>
+          </li>
         </ul>
       </div>
     </div>
   </footer>
   <section class="feedback__section feedback-section">
-    <div class="feedback__form feedback-form feedback-form">
+    <div class="feedback__form feedback-form">
       <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
       <!-- прописать метод и экшн -->
       <form action="" class="feedback-form__container form-container">
         <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
-        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;" placeholder="Имя*" />
-        <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}" placeholder="Номер телефона*">
-        <div class="form-container__personal-data personal-data">
-          <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data"><label
-            for="personal-data"></label>
-          <p class="personal-data__offer">
-            Согласие на обработку персональных данных
-          </p>
-        </div>
-        <button type="submit" class="contacts-section__send-button button feedback-form--send-button">Отправить</button>
+        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
+          placeholder="Имя*" />
+        <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}"
+          placeholder="Номер телефона*">
+        <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
+        <label class="personal-data__label" for="personal-data">
+          Согласие на обработку персональных данных
+        </label>
+        <button type="submit" class="contacts-section__send-button button">Отправить</button>
         <button type="button" class="feedback-form__close-button"></button>
       </form>
     </div>
   </section>
   <script src="js/main.js"></script>
-</body>
-</html>
+  <script src="js/chief-slider.js"></script>
+  </body>
+  
+  </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>BikePark</title>
@@ -9,7 +10,9 @@
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/chief-slider.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <div class="header__top-line">
@@ -19,7 +22,7 @@
       </a>
       <nav class="header__nav nav">
         <ul class="nav-list">
-          <li><a class="nav-link" href="#">О нас</a></li>
+          <li><a class="nav-link" href="about.html">О нас</a></li>
           <li><a class="nav-link" href="#">Аренда</a></li>
           <li><a class="nav-link" href="#">Доставка</a></li>
           <li><a class="nav-link" href="ride.html">Где кататься</a></li>
@@ -32,7 +35,7 @@
             <button class="button__enter" type="button"></button>
           </li>
           <li class="button-list__item">
-            <button class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+            <button type="button" class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
           </li>
         </ul>
       </div>
@@ -48,7 +51,7 @@
   <main>
     <section class="contacts__section">
       <div class="contacts__area contacts-area section-area">
-        <h2 class="contacts-area__tittle">Контакты</h2>
+        <h2 class="contacts-area__tittle area-tittle">Контакты</h2>
         <div class="contacts-area__container contacts-container">
           <div class="contacts__container">
             <h3 class="contacts-container__caption">Номер телефона</h3>
@@ -63,30 +66,28 @@
             <p class="feedback-container__text">Остались вопросы? Свяжитесь с нами</p>
             <input type="text" name="Имя" class="feedback-container__input" style="text-transform: capitalize;" placeholder="Имя*"/>
             <input type="tel" name="phone-number" class="feedback-container__input" pattern="[0-9]{9}" placeholder="Номер телефона*">
-            <div class="feedback-container__personal-data">
-              <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data"><label for="personal-data"></label>
-              <p class="personal-data__offer">
-                Согласие на обработку персональных данных
-              </p>
-            </div>
+            <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
+            <label class="personal-data__label" for="personal-data">
+              Согласие на обработку персональных данных
+            </label>           
             <button type="submit" class="contacts-section__send-button button">Отправить</button>
           </div>
         </div>
         <div class="contacts__section__map-container">
-          <!--img src="img/map-image.png" width="1160" height="595" alt="карта Страна А, город Б, ул. АААА"-->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10282.95381305358!2d54.55218343135572!3d24.326518534333246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1630323898065!5m2!1sru!2sru"
-            width="1160" height="595" style="border:0;" allowfullscreen="" loading="lazy">
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10282.95381305358!2d54.55218343135572!3d24.326518534333246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1630323898065!5m2!1sru!2sru"
+          width="1160" height="595" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
+          <img class="section-map__image" src="img/map-image.png" width="1160" height="595" alt="карта Страна А, город Б, ул. АААА">
         </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer__basic foter-basic">
     <div class="footer__container footer-container">
       <div class="footer-container__top-line top-line">
         <a class="top-line__link" href="index.html">
-          <h3 class="top-line__tittle">Аренда велосипедов</h3>
+          <h2 class="top-line__tittle">Аренда велосипедов</h2>
         </a>
         <ul class="footer__nav footer-nav">
           <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
@@ -113,12 +114,37 @@
         <p class="copyring-social__text">&copy; BikePark, 2021</p>
         <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
         <ul class="copyring-social__list social-list">
-          <li><a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a></li>
+          <li class="social-list__item social-list__item--facebook">
+            <a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a>
+          </li>
         </ul>
       </div>
     </div>
   </footer>
+  <section class="feedback__section feedback-section">
+    <div class="feedback__form feedback-form">
+      <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
+      <!-- прописать метод и экшн -->
+      <form action="" class="feedback-form__container form-container">
+        <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
+        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
+          placeholder="Имя*" />
+        <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}"
+          placeholder="Номер телефона*">
+        <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
+        <label class="personal-data__label" for="personal-data">
+          Согласие на обработку персональных данных
+        </label>
+        <button type="submit" class="contacts-section__send-button button">Отправить</button>
+        <button type="button" class="feedback-form__close-button"></button>
+      </form>
+    </div>
+  </section>
   <script src="js/main.js"></script>
-</body>
-</html>
+  <script src="js/chief-slider.js"></script>
+  </body>
+  
+  </html>

@@ -13,7 +13,7 @@ window.onload = function() {
 
 
 
-// feedback-form__close-button формы "Обратная связь"
+// feedback-form__close-button формы Обратная связь
 var button = document.querySelector(".button__feedback");
 var popup = document.querySelector(".feedback-section");
 var close = document.querySelector(".feedback-form__close-button");
@@ -36,3 +36,13 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 }); 
+
+// инициализация слайдера старницы "О нас"
+    document.addEventListener('DOMContentLoaded', function () {
+      new ChiefSlider('.slider', {
+        loop: true,
+        autoplay: true,
+        interval: 5000,
+        refresh: true,
+      });
+    });

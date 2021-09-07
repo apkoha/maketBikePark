@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>BikePark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/chief-slider.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top-line">
+      <a class="top-line__logo" href="index.html">
+        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="about.html">О нас</a></li>
+          <li><a class="nav-link" href="#">Аренда</a></li>
+          <li><a class="nav-link" href="#">Доставка</a></li>
+          <li><a class="nav-link" href="ride.html">Где кататься</a></li>
+          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <ul class="header-button__list">
+          <li class="button-list__item">
+            <button class="button__enter" type="button"></button>
+          </li>
+          <li class="button-list__item">
+            <button type="button" class="button__feedback button" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+          </li>
+        </ul>
+      </div>
+      <div class="header__clock clock">
+        <ul class="clock__list">
+          <li class="clock-item" id="hours">00</li>
+          <li class="clock-item clock-item__separator" id="separator">:</li>
+          <li class="clock-item" id="minutes">00</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about__section about-section">
+      <div class="about-section__area section-area">
+        <h2 class="about-area__tittle">О нас</h2>
+          <div class="about-section__container">
+            <div class="about-container__text">
+              <p class="about-area__text">
+                Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
+                направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и
+                сфера
+                нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
+              </p>
+              <p class="about-area__text">
+                Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых
+                участниками в отношении.
+              </p>
+            </div>
+            <img class="about-area__foto" src="img/about-foto.jpg" alt="Фото велосипедов" width="560" height="286">
+          </div>
+      </div>
+    </section>
+    <section class="slider__section slider-section">
+      <div class="slider-section__area">
+        <h2 class="slider-section__subtittle">Отзывы</h2>
+        <div class="container">
+      
+          <div class="slider" data-slider="chiefslider">
+            <div class="slider__container">
+              <div class="slider__wrapper">
+                <div class="slider__items" style="transform: translateX(0%);">
+      
+                  <div class="slider__item" data-index="0" data-order="0" data-translate="0"
+                    style="transform: translateX(0px);">
+                    <div class="slider__item-content">
+                      <p class="slider__content_text">Безусловно, семантический разбор внешних противодействий способствует
+                        повышению качества вывода текущих активов.
+                        противодействий способствует повышению качества вывода текущих активов.</p>
+                      <span class="slider__content_author">Александр А.</span>
+                    </div>
+                  </div>
+      
+                  <div class="slider__item slider__item_active" data-index="1" data-order="1" data-translate="0"
+                    style="transform: translateX(0px);">
+                    <div class="slider__item-content">
+                      <p class="slider__content_text">Безусловно, семантический разбор внешних противодействий способствует
+                        повышению
+                        качества вывода текущих активов.
+                        противодействий способствует повышению качества вывода текущих активов<br>
+                        противодействий способствует повышению качества</p>
+                      <span class="slider__content_author">Александр Б.</span>
+                    </div>
+                  </div>
+      
+                  <div class="slider__item slider__item_active" data-index="2" data-order="2" data-translate="0"
+                    style="transform: translateX(0px);">
+                    <div class="slider__item-content">
+                      <p class="slider__content_text">Безусловно, семантический разбор внешних противодействий способствует
+                        повышению
+                        качества вывода текущих активов.
+                        противодействий способствует повышению качества вывода текущих активов.</p>
+                      <span class="slider__content_author">Александр В.</span>
+                    </div>
+                  </div>
+      
+                  <div class="slider__item" data-index="3" data-order="3" data-translate="0"
+                    style="transform: translateX(0px);">
+                    <div class="slider__item-content">
+                      <p class="slider__content_text">Безусловно, семантический разбор внешних противодействий способствует
+                        повышению
+                        качества вывода текущих активов.
+                        противодействий способствует повышению качества вывода текущих активов<br>
+                        противодействий способствует повышению качества</p>
+                      <span class="slider__content_author">Александр Г.</span>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+            <a href="#" class="slider__control" data-slide="prev"></a>
+            <a href="#" class="slider__control" data-slide="next"></a>
+            <ol class="slider__indicators">
+              <li data-slide-to="0"></li>
+              <li data-slide-to="1"></li>
+              <li data-slide-to="2"></li>
+              <li data-slide-to="3"></li>
+            </ol>
+          </div>
+      
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer__basic foter-basic">
+    <div class="footer__container footer-container">
+      <div class="footer-container__top-line top-line">
+        <a class="top-line__link" href="index.html">
+          <h2 class="top-line__tittle">Аренда велосипедов</h2>
+        </a>
+        <ul class="footer__nav footer-nav">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Отзывы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+        </ul>
+      </div>
+      <ul class="footer__list footer-list">
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Алюминий</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Карбон</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Горные/городские</a>
+        </li>
+        <li class="footer-list__item">
+          <a class="footer-list__link" href="#">Городские эконом</a>
+        </li>
+      </ul>
+      <div class="footer__copyring-social copyring-social">
+        <p class="copyring-social__text">&copy; BikePark, 2021</p>
+        <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
+        <ul class="copyring-social__list social-list">
+          <li class="social-list__item social-list__item--facebook">
+            <a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link instagram--link" href="#" aria-label="Инстаграм"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <section class="feedback__section feedback-section">
+    <div class="feedback__form feedback-form">
+      <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
+      <!-- прописать метод и экшн -->
+      <form action="" class="feedback-form__container form-container">
+        <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
+        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
+          placeholder="Имя*" />
+        <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}"
+          placeholder="Номер телефона*">
+        <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
+        <label class="personal-data__label" for="personal-data">
+          Согласие на обработку персональных данных
+        </label>
+        <button type="submit" class="contacts-section__send-button button">Отправить</button>
+        <button type="button" class="feedback-form__close-button"></button>
+      </form>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script src="js/chief-slider.js"></script>
+  </body>
+  
+  </html>

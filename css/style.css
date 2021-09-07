@@ -18,10 +18,10 @@ body {
 .bicycle-model,
 .contacts__section {
   position: relative;
-  margin: 0 auto;
   width: 1240px;
-  background-color: #f2f4f7;
+  margin: 0 auto;
   border-radius: 20px;
+  background-color: #f2f4f7;
 }
 
 .button {
@@ -937,7 +937,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 /* Стилизация футера */
-footer {
+.foter-basic {
   min-width: 1240px;
   background-color: #272934;
   color: #ffffff;
@@ -955,6 +955,10 @@ footer {
   justify-content: space-between;
 }
 
+.footer-container__top-line {
+  margin-bottom: 26px;
+}
+
 .top-line__link {
   text-decoration: none;
   color: inherit;
@@ -962,7 +966,6 @@ footer {
 
 .top-line__tittle {
   margin: 0px;
-  margin-bottom: 26px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1020,6 +1023,10 @@ footer {
   margin-bottom: 8px;
 }
 
+.footer-list__item:last-child {
+  margin-bottom: 0px;
+}
+
 .footer-list__link {
   text-decoration: none;
   color: inherit;
@@ -1049,7 +1056,7 @@ footer {
 }
 
 .copyring-social__link {
-  margin-right: 452px;
+  margin-right: auto;
   text-decoration: none;
   color: inherit;
 }
@@ -1061,8 +1068,8 @@ footer {
   padding: 0px;
 }
 
-.copyring-social__list {
-  margin-right: 8px;
+.social-list__item--facebook {
+  margin-right: 29px;
 }
 
 .social-list__link {
@@ -1074,7 +1081,6 @@ footer {
 }
 
 .facebook--link {
-  margin-right: 29px;
   background-image: url("../img/fb-icon.svg");
 }
 
@@ -1093,15 +1099,17 @@ footer {
   padding-bottom: 70px;
 }
 
-.contacts-area__tittle {
-  width: 300px;
+.area-tittle {
   margin: 0px;
-  margin-bottom: 52px;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
   line-height: 58px;
   color: #14233d;
+}
+
+.contacts-area__tittle {
+  margin-bottom: 52px;
 }
 
 .contacts-container {
@@ -1157,11 +1165,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 560px;
+  margin-bottom: 60px;
 }
 
 .feedback-container__input,
 .form-container__input {
-  width: 520px;
+  width: 560px;
   margin-bottom: 20px;
   padding: 19px 20px 19px 20px;
   border-radius: 15px;
@@ -1179,12 +1189,13 @@ footer {
   outline: none;
 }
 
-.feedback-container__personal-data,
-.form-container__personal-data {
-  display: flex;
-  align-items: center;
-  width: 560px;
+.personal-data__label {
   margin-bottom: 21px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #14233d;
 }
 
 /*Чекбокс малый 32х32*/
@@ -1196,21 +1207,22 @@ footer {
   height: 32px;
 }
 
-.checkbox--small + label {
+.checkbox--small + .personal-data__label {
   display: inline-flex;
   align-items: center;
   user-select: none;
   cursor: pointer;
 }
 
-.checkbox--small:checked + label::before {
+.checkbox--small:checked + .personal-data__label::before {
   background-color: #297fff;
   background-image: url("../img/checkmark.svg");
 }
 
-.checkbox--small + label::before {
+.checkbox--small + .personal-data__label::before {
   content: "";
   display: inline-block;
+  margin-right: 15px;
   width: 32px;
   height: 32px;
   flex-shrink: 0;
@@ -1222,19 +1234,8 @@ footer {
   background-position: center center;
 }
 
-.personal-data__offer {
-  margin: 0px;
-  margin-left: 15px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #14233d;
-}
-
 .contacts-section__send-button {
   width: 560px;
-  margin-bottom: 60px;
   padding: 19px 200px 19px 200px;
   font-style: normal;
   font-weight: bold;
@@ -1252,13 +1253,12 @@ footer {
 
 /* начало CSS страницы RIDE */
 .ride__section {
-  position: relative;
-  margin: 0 auto;
   width: 1240px;
+  margin: 0 auto;
 }
 
 .section-area {
-  width: 1160px;
+  width: 1240px;
   margin: 0 auto;
   padding-right: 40px;
   padding-left: 40px;
@@ -1472,6 +1472,7 @@ footer {
 
 /* начало Формы "Обратная связь" */
 /* работает только на главной странице */
+
 .feedback-section {
   display: none;
   position: fixed;
@@ -1498,12 +1499,13 @@ footer {
 }
 
 .feedback__form {
-  width: 560px;
-  height: 372px;
+  width: 640px;
+  height: 486px;
   padding: 54px 40px 60px 40px;
 }
 
 .form-container__text {
+  width: 560px;
   margin: 0px;
   margin-bottom: 37px;
   font-style: normal;
@@ -1513,8 +1515,11 @@ footer {
   color: #14233d;
 }
 
-.feedback-form--send-button {
-  margin-bottom: 0px;
+.form-container__personal-data {
+  display: flex;
+  align-items: center;
+  width: 560px;
+  margin-bottom: 21px;
 }
 
 .feedback-form__close-button {
@@ -1553,3 +1558,159 @@ footer {
   background-color: transparent;
 }
 /* конец Формы "Обратная связь" */
+
+/* Начало стилизации старницы "О нас" */
+.about-section {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.section__area {
+  width: 1240px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 20px;
+  background-color: #f2f4f7;
+}
+
+.about__section {
+  color: #14233d;
+  margin-bottom: 34px;
+}
+
+.about-section__area {
+  padding-top: 61px;
+  padding-bottom: 70px;
+}
+
+.about-section__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-area__tittle {
+  margin: 0px;
+  margin-bottom: 45px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.about-container__text {
+  width: 560px;
+}
+
+.about-area__text {
+  margin: 0px;
+  margin-bottom: 11px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.about-area__text + .about-area__text {
+  margin-bottom: 0px;
+}
+
+.about-area__foto {
+  width: 560px;
+  height: 286px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* @media (min-width: 768px) {
+  .about-section {
+    max-width: 730px;
+  }
+
+  .about__section {
+    margin-bottom: 21px;
+  }
+
+  .about-section__area {
+    padding-top: 46px;
+    padding-bottom: 45px;
+  }
+
+  .section-area {
+    max-width: 730px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .about-area__tittle {
+    margin-bottom: 34px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 37px;
+    color: #14233d;
+  }
+
+  .about-container__text {
+    width: 330px;
+  }
+
+  .about-area__text {
+    margin-bottom: 23px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #14233d;
+  }
+
+  .about-area__foto {
+    width: 330px;
+    height: 169px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    max-width: 1240px;
+  }
+
+  .about__section {
+    margin-bottom: 34px;
+  }
+
+  .section-area {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .about-area__tittle {
+    margin-bottom: 45px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .about-container__text {
+    width: 560px;
+  }
+
+  .about-area__text {
+    margin-bottom: 23px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #14233d;
+  }
+
+  .about-area__foto {
+    width: 560px;
+    height: 286px;
+  }
+} */
+
+/* Конец стилизации старницы "О нас" */
