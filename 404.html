@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>BikePark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top-line">
+      <a class="top-line__logo" href="index.html">
+        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="about.html">О нас</a></li>
+          <li><a class="nav-link" href="rent.html">Аренда</a></li>
+          <li><a class="nav-link" href="rules.html">Доставка</a></li>
+          <li><a class="nav-link" href="ride.html">Где кататься</a></li>
+          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <ul class="header-button__list">
+          <li class="button-list__item">
+            <button class="button__enter" type="button"></button>
+          </li>
+          <li class="button-list__item">
+            <button type="button" class="button__feedback button  button--cyan" type="button">ОБРАТНАЯ СВЯЗЬ</button>
+          </li>
+        </ul>
+      </div>
+      <div class="header__clock clock">
+        <ul class="clock__list">
+          <li class="clock-item" id="hours">00</li>
+          <li class="clock-item clock-item__separator" id="separator">:</li>
+          <li class="clock-item" id="minutes">00</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="error__page error-page">
+      <h2 class="error-page__title">404</h2>
+      <p class="error-page__text">
+        The page does not exist or has not created yet
+      </p>
+      <a class="error-page__button button button--cyan" href="index.html">Back to main page</a>
+    </section>
+  </main>
+  <section class="feedback__section feedback-section">
+    <div class="feedback__form feedback-form">
+      <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
+      <!-- прописать метод и экшн -->
+      <form action="" class="feedback-form__container form-container">
+        <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
+        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
+          placeholder="Имя*" />
+        <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}"
+          placeholder="Номер телефона*">
+        <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
+        <label class="personal-data__label" for="personal-data">
+          Согласие на обработку персональных данных
+        </label>
+        <button type="submit" class="contacts-section__send-button button button--cyan">Отправить</button>
+        <button type="button" class="feedback-form__close-button"></button>
+      </form>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script src="js/chief-slider.js"></script>
+</body>
+</html>

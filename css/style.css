@@ -292,7 +292,7 @@ body {
 .container--helmet {
   position: relative;
   left: 238px;
-  background-image: url(../img/helmet-background.png);
+  background-image: url("../img/helmet-background.png");
 }
 
 .container--helmet::before {
@@ -306,7 +306,7 @@ body {
 .container--flashlight {
   position: relative;
   left: 118px;
-  background-image: url(../img/flashlight-backgroung.png);
+  background-image: url("../img/flashlight-backgroung.png");
 }
 
 .container--flashlight::before {
@@ -321,7 +321,7 @@ body {
   position: relative;
   width: 272px;
   height: 210px;
-  background-image: url(../img/locker-backgroung.png);
+  background-image: url("../img/locker-backgroung.png");
 }
 
 .container--locker::before {
@@ -1201,6 +1201,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
 }
 
+.contacts-area__container {
+  margin-bottom: 60px;
+}
+
 .contacts-container__caption {
   margin: 0px;
   margin-bottom: 10px;
@@ -1245,7 +1249,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: start;
   width: 560px;
-  margin-bottom: 60px;
 }
 
 .feedback-container__input,
@@ -1322,6 +1325,16 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   font-size: 20px;
   line-height: 22px;
+}
+
+.feedback-container__success {
+  margin: 0 auto;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #28b737;
 }
 
 .contacts__section__map-container {
@@ -1541,95 +1554,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   margin-top: 31px;
 }
 /*конец CSS страницы RULES*/
-
-/* начало Формы "Обратная связь" */
-/* работает только на главной странице */
-
-.feedback-section {
-  display: none;
-  position: fixed;
-  z-index: 3;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0, 0.6);
-}
-
-.feedback-section--show {
-  display: block;
-}
-
-.feedback-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 15px;
-  background-color: #ffffff;
-}
-
-.feedback__form {
-  width: 640px;
-  height: 486px;
-  padding: 54px 40px 60px 40px;
-}
-
-.form-container__text {
-  width: 560px;
-  margin: 0px;
-  margin-bottom: 37px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 31px;
-  color: #14233d;
-}
-
-.form-container__personal-data {
-  display: flex;
-  align-items: center;
-  width: 560px;
-  margin-bottom: 21px;
-}
-
-.feedback-form__close-button {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  top: 0px;
-  right: -50px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  outline: none;
-}
-
-.feedback-form__close-button:before,
-.feedback-form__close-button::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  left: -3px;
-  width: 25px;
-  height: 2px;
-  background: #ffffff;
-  border-radius: 2px;
-  transform: rotate(45deg);
-}
-
-.feedback-form__close-button:before {
-  transform: rotate(135deg);
-}
-
-.feedback-form__close-button {
-  background-color: transparent;
-}
-/* конец Формы "Обратная связь" */
 
 /* Начало стилизации старницы "О нас" */
 .about-section {
@@ -2110,3 +2034,248 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   line-height: 22px;
 }
 /* Конец стилизации страницы "Аренда" */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.error-page__title {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 208px;
+  line-height: 254px;
+  color: #14233d;
+}
+
+.error-page__text {
+  margin: 0px;
+  margin-bottom: 52px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+}
+
+.error-page__button {
+  width: 260px;
+  padding: 19px 30px 19px 33px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+/* начало Формы "Обратная связь" */
+.feedback-section,
+.login-section,
+.registration-section {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.feedback-section--show {
+  display: block;
+}
+
+.feedback-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.feedback__form {
+  width: 640px;
+  height: 486px;
+  padding: 54px 40px 60px 40px;
+}
+
+.form-container__text {
+  width: 560px;
+  margin: 0px;
+  margin-bottom: 37px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 31px;
+  color: #14233d;
+}
+
+.form-container__personal-data {
+  display: flex;
+  align-items: center;
+  width: 560px;
+  margin-bottom: 21px;
+}
+
+.feedback-form__close-button,
+.login-form__close-button,
+.registration-form__close-button {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  right: -50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.feedback-form__close-button:before,
+.feedback-form__close-button::after,
+.login-form__close-button:before,
+.login-form__close-button::after,
+.registration-form__close-button::before,
+.registration-form__close-button::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.feedback-form__close-button:before,
+.login-form__close-button:before,
+.registration-form__close-button::before {
+  transform: rotate(135deg);
+}
+
+.feedback-form__close-button {
+  background-color: transparent;
+}
+/* конец Формы "Обратная связь" */
+
+/* начало Формы "Login" */
+.login-section--show {
+  display: block;
+}
+
+.login__form {
+  width: 640px;
+  padding: 42px 40px 56px 40px;
+}
+
+.login__button {
+  width: 277px;
+  margin-bottom: 35px;
+  padding: 15px;
+  border-radius: 0px;
+  border-bottom: 1px solid #dde3eb;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #14233d;
+  background-color: #ffffff;
+}
+
+.login__button--enter {
+  border-bottom: 2px solid #297fff;
+  color: #297fff;
+}
+
+.login-form__text {
+  margin: 0px;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #abb1c5;
+}
+
+.login-input__phone {
+  margin-bottom: 34px;
+}
+
+.login-input__password {
+  margin-bottom: 40px;
+}
+
+.login-form__login-button {
+  width: 560px;
+  margin-bottom: 20px;
+  padding: 19px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.login-form__promt {
+  position: relative;
+  margin: 0px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #297fff;
+}
+
+.login-form__promt::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 210px;
+  width: 139px;
+  height: 1px;
+  background-color: #297fff;
+}
+/* конец Формы "Login" */
+
+/* конец Формы "Регистарция" */
+.registration-section--show {
+  display: block;
+}
+
+.registration__form {
+  width: 640px;
+  padding: 42px 40px 56px 40px;
+}
+
+.login__button--registration {
+  border-bottom: 2px solid #297fff;
+  color: #297fff;
+}
+
+.registration-input__name,
+.registration-input__mail {
+  margin-bottom: 34px;
+}
+
+.registration-form__promt {
+  margin: 0px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #abb1c5;
+}
+
+/* конец Формы "Регистарция" */

@@ -50,7 +50,7 @@
   </header>
   <main>
     <div class="rent__section rent-section">
-      <div class="rent__area section-area">
+      <div class="rent__area section-area" id="link-further">
         <h2 class="rent-area__tittle">Заявка на аренду велосипедов</h2>
         <ul class="rent-area__application">
           <li class="rent-application__item">Название велосипедов</li>
@@ -153,7 +153,7 @@
           <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="about.html#link-review">Отзывы</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link feedback__link" href="#">Обратная связь</a></li>
         </ul>
       </div>
       <ul class="footer__list footer-list">
@@ -172,7 +172,7 @@
       </ul>
       <div class="footer__copyring-social copyring-social">
         <p class="copyring-social__text">&copy; BikePark, 2021</p>
-        <a class="copyring-social__link" href="#">Политика конфиденциальности</a>
+        <a class="copyring-social__link" href="404.html">Политика конфиденциальности</a>
         <ul class="copyring-social__list social-list">
           <li class="social-list__item social-list__item--facebook">
             <a class="social-list__link facebook--link" href="#" aria-label="Фейсбук"></a>
@@ -187,23 +187,39 @@
   <section class="feedback__section feedback-section">
     <div class="feedback__form feedback-form">
       <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
-      <!-- прописать метод и экшн -->
       <form action="" class="feedback-form__container form-container">
         <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
         <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
-          placeholder="Имя*"/>
+          placeholder="Имя*" />
         <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}"
           placeholder="Номер телефона*">
         <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
         <label class="personal-data__label" for="personal-data">
           Согласие на обработку персональных данных
         </label>
-        <button type="submit" class="contacts-section__send-button button">Отправить</button>
+        <button type="submit" class="contacts-section__send-button button button--cyan">Отправить</button>
         <button type="button" class="feedback-form__close-button"></button>
       </form>
     </div>
   </section>
+  <section class="login__section login-section">
+    <div class="login__form feedback-form">
+      <h2 class="login__form__tittle visualy-hidden">Форма Входа</h2>
+      <form action="" class="login-form__container form-container">
+        <button class="login__button login-button__enter button" type="button">Вход</button>
+        <button class="login__button login-button__registration button" type="button">Регистрация</button>
+        <p class="login-form__text">Номер телефона*</p>
+        <input type="tel" name="phone-number" class="login-input__phone form-container__input" pattern="[0-9]{9}"
+          placeholder="Введите номер телефона">
+        <p class="login-form__text">Пароль*</p>
+        <input type="password" class="login-input__password form-container__input" placeholder="Введите пароль">
+        <button class="login-form__login-button button button--cyan">Войти</button>
+        <p class="login-form__promt">Забыли пароль?</p>
+        <button type="button" class="login-form__close-button"></button>
+      </form>
+    </div>
+  </section>
   <script src="js/main.js"></script>
-  <script src="js/chief-slider.js"></script>
-</body>
-</html>
+  <!-- <script src="js/chief-slider.js"></script> -->
+  </body>
+  </html>
