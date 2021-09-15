@@ -8,42 +8,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="header__top-line">
-      <a class="top-line__logo" href="index.html">
-        <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
-        <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
-      </a>
-      <nav class="header__nav nav">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="about.html">О нас</a></li>
-          <li><a class="nav-link" href="rent.html">Аренда</a></li>
-          <li><a class="nav-link" href="rules.html">Доставка</a></li>
-          <li><a class="nav-link" href="ride.html">Где кататься</a></li>
-          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="header-button">
-        <ul class="header-button__list">
-          <li class="button-list__item">
-            <button class="button__enter" type="button"></button>
-          </li>
-          <li class="button-list__item">
-            <button type="button" class="button__feedback button button--cyan" type="button">ОБРАТНАЯ СВЯЗЬ</button>
-          </li>
-        </ul>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top-line">
+        <a class="top-line__logo" href="index.html">
+          <img class="top-line__logo-image" src="img/logo.svg" alt="Логотип" width="66" height="42">
+          <h1 class="top-line__tittle visualy-hidden">BikePark</h1>
+        </a>
+        <nav class="header__nav nav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="about.html">О нас</a></li>
+            <li><a class="nav-link" href="rent.html">Аренда</a></li>
+            <li><a class="nav-link" href="rules.html">Доставка</a></li>
+            <li><a class="nav-link" href="ride.html">Где кататься</a></li>
+            <li><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-button">
+          <ul class="header-button__list">
+            <li class="button-list__item">
+              <button class="button__enter button" type="button"></button>
+            </li>
+            <li class="button-list__item">
+              <button type="button" class="button__feedback button button--cyan">ОБРАТНАЯ СВЯЗЬ</button>
+            </li>
+          </ul>
+        </div>
+        <div class="header__clock clock">
+          <ul class="clock__list">
+            <li class="clock-item" id="hours">00</li>
+            <li class="clock-item clock-item__separator" id="separator">:</li>
+            <li class="clock-item" id="minutes">00</li>
+          </ul>
+        </div>
       </div>
-      <div class="header__clock clock">
-        <ul class="clock__list">
-          <li class="clock-item" id="hours">00</li>
-          <li class="clock-item clock-item__separator" id="separator">:</li>
-          <li class="clock-item" id="minutes">00</li>
-        </ul>
-      </div>
-    </div>
-  </header>
+    </header>
   <main>
     <section class="main-content__section main-content">
       <div class="main-content__container">
@@ -83,15 +83,15 @@
         </li>
         <li class="data-list__item">
           <p class="start-data__text">Дата и время начала</p>
-          <input class="data-counter start-data__container data-item--vector" type="datetime-local" name="" id="">
+          <input class="data-counter start-data__container data-item--vector" type="datetime-local">
         </li>
         <li class="data-list__item">
           <p class="end-data__text">Дата и время конца</p>
-          <input class="data-counter data-item--vector" type="datetime-local" name="" id="">
+          <input class="data-counter data-item--vector" type="datetime-local">
         </li>
         <li class="data-list__item">
           <p class="delivery-type__text">Доставка</p>
-          <select name="delivery-type" id="" class="delivery-type__option data-item--vector">
+          <select name="delivery-type" class="delivery-type__option data-item--vector">
             <option class="delivery-type">По адресу</option>
             <option class="delivery-type">Самовывоз</option>
           </select>
@@ -110,7 +110,7 @@
               <button class="price-container__button button-help button__help" type="button"></button>
               <div class="price-container__prompt price-promt price__promt--aluminum">
                 <p class="price-promt__text">
-                  Легкие, надежные и легко управляются.</br>Возможны вибрации из-за неровностей дороги.
+                  Легкие, надежные и легко управляются.<br>Возможны вибрации из-за неровностей дороги.
                 </p>
               </div>
               <input class="bicycle__add" type="checkbox" id="bicycle-aluminum"><label for="bicycle-aluminum"></label>
@@ -172,7 +172,7 @@
       <div class="model__brand-size brand-size">
         <div class="brand-size__container">
           <p class="brand-size__text">Бренд</p>
-          <select name="model__brand" id="" class="brand-size__select">
+          <select name="model__brand" class="brand-size__select">
             <option class="brand-size__brand">Все</option>
             <option class="brand-size__brand">SCHWINN</option>
             <option class="brand-size__brand">Specialized</option>
@@ -182,7 +182,7 @@
         </div>
         <div class="brand-size__container">
           <p class="brand-size__text">Размер рамы</p>
-          <select name="model__size" id="" class="brand-size__select">
+          <select name="model__size" class="brand-size__select">
             <option class="brand-size__size">Все</option>
             <option class="brand-size__size">18”</option>
             <option class="brand-size__size">19”</option>
@@ -320,7 +320,7 @@
           <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="about.html#link-review">Отзывы</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link feedback__link" href="#">Обратная связь</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#link-feedback">Обратная связь</a></li>
         </ul>
       </div>
       <ul class="footer__list footer-list">
@@ -354,10 +354,9 @@
   <section class="feedback__section feedback-section">
     <div class="feedback__form feedback-form">
       <h2 class="feedback-form__tittle visualy-hidden">Форма обратной связи</h2>
-      <form action="" class="feedback-form__container form-container">
+      <form class="feedback-form__container form-container">
         <p class="form-container__text">Есть вопросы? Оставьте<br>номер, и мы всё обсудим</p>
-        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;"
-          placeholder="Имя*" />
+        <input type="text" name="Имя" class="form-container__input" style="text-transform: capitalize;" placeholder="Имя*" />
         <input type="tel" name="phone-number" class="form-container__input" pattern="[0-9]{9}" placeholder="Номер телефона*">
         <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data">
         <label class="personal-data__label" for="personal-data">
@@ -371,45 +370,46 @@
   <section class="login__section login-section">
     <div class="login__form feedback-form">
       <h2 class="login__form__tittle visualy-hidden">Форма Входа</h2>
-      <form action="" class="login-form__container form-container">
-        <button class="login__button login-button__enter button" type="button">Вход</button>
+      <form class="login-form__container form-container">
+        <button class="login__button login-button__enter login__button--active button" type="button">Вход</button>
         <button class="login__button login-button__registration button" type="button">Регистрация</button>
         <p class="login-form__text">Номер телефона*</p>
         <input type="tel" name="phone-number" class="login-input__phone form-container__input" pattern="[0-9]{9}" placeholder="Введите номер телефона">
         <p class="login-form__text">Пароль*</p>
-        <input type="password" class="login-input__password form-container__input" placeholder="Введите пароль">
+        <input type="password" class="login-input__password form-container__input" id="login__password" name="password" placeholder="Введите пароль">
+        <span class="login-form__eye--blind" onclick="return login_password(this);"></span>
         <button class="login-form__login-button button button--cyan">Войти</button>
         <p class="login-form__promt">Забыли пароль?</p>
         <button type="button" class="login-form__close-button"></button>
       </form>
     </div>
-  </section>
+  </section> 
   <section class="registration__section registration-section">
     <div class="registration__form feedback-form">
       <h2 class="registration__form__tittle visualy-hidden">Форма Регистрации</h2>
-      <form action="" class="registration-form__container form-container">
-        <button class="login__button login-button__enter button" type="button">Вход</button>
-        <button class="login__button registration-button__registration button" type="button">Регистрация</button>
+      <form class="registration-form__container form-container">
+        <button class="login__button login-button__enter login-button__enter--enter button" type="button">Вход</button>
+        <button class="login__button login-button__registration button login__button--active" type="button">Регистрация</button>
         <p class="login-form__text">Имя*</p>
         <input type="text" name="Имя" class="registration-input__name form-container__input" style="text-transform: capitalize;" placeholder="Введите имя"/>
         <p class="login-form__text">Номер телефона*</p>
         <input type="tel" name="phone-number" class="login-input__phone form-container__input" pattern="[0-9]{9}" placeholder="Введите номер телефона">
         <p class="login-form__text">E-mail</p>
-        <input type="e-mail" class="registration-input__mail form-container__input" placeholder="Введите E-mail" />
+        <input type="email" class="registration-input__mail form-container__input" placeholder="Введите E-mail" />
         <p class="login-form__text">Пароль*</p>
-        <input type="password" class="registration-input__password form-container__input" placeholder="Введите пароль">
+        <input type="password" class="registration-input__password form-container__input" id="registration__password" name="confirm" placeholder="Введите пароль">
+        <span class="registration-form__eye--blind" onclick="return registration_password(this);"></span>
         <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data--registration">
         <label class="personal-data__label" for="personal-data--registration">
           Согласие на обработку персональных данных
         </label>
         <button class="login-form__login-button button button--cyan">Войти</button>
         <p class="registration-form__promt">Уже авторизованы?</p>
-        <!-- <span>Войти</span> -->
+        <!-- <span>Войти</span>-->
         <button type="button" class="registration-form__close-button"></button>
       </form>
     </div>
   </section>
-  <script src="js/main.js"></script>
-  <!-- <script src="js/chief-slider.js"></script> -->
+  <script src="./js/main.js"></script>
   </body>
   </html>

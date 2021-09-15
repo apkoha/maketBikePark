@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>BikePark</title>
@@ -11,7 +10,6 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
   <header class="header">
     <div class="header__top-line">
@@ -96,7 +94,8 @@
           <li class="footer-nav__item"><a class="footer-nav__link" href="rules.html">Правила</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="about.html#link-review">Отзывы</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link feedback__link" href="#">Обратная связь</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#link-feedback">Обратная связь</a>
+          </li>
         </ul>
       </div>
       <ul class="footer__list footer-list">
@@ -149,20 +148,49 @@
     <div class="login__form feedback-form">
       <h2 class="login__form__tittle visualy-hidden">Форма Входа</h2>
       <form action="" class="login-form__container form-container">
-        <button class="login__button login-button__enter button" type="button">Вход</button>
+        <button class="login__button login-button__enter login__button--active button" type="button">Вход</button>
         <button class="login__button login-button__registration button" type="button">Регистрация</button>
         <p class="login-form__text">Номер телефона*</p>
         <input type="tel" name="phone-number" class="login-input__phone form-container__input" pattern="[0-9]{9}"
           placeholder="Введите номер телефона">
         <p class="login-form__text">Пароль*</p>
-        <input type="password" class="login-input__password form-container__input" placeholder="Введите пароль">
+        <input type="password" class="login-input__password form-container__input" name="password"
+          placeholder="Введите пароль">
+        <span class="login-form__eye" id="eyeclosed" onclick="pass_eye()"></span>
         <button class="login-form__login-button button button--cyan">Войти</button>
         <p class="login-form__promt">Забыли пароль?</p>
         <button type="button" class="login-form__close-button"></button>
       </form>
     </div>
   </section>
+  <section class="registration__section registration-section">
+    <div class="registration__form feedback-form">
+      <h2 class="registration__form__tittle visualy-hidden">Форма Регистрации</h2>
+      <form action="" class="registration-form__container form-container">
+        <button class="login__button login-button__enter login-button__enter--enter button" type="button">Вход</button>
+        <button class="login__button login-button__registration button login__button--active"
+          type="button">Регистрация</button>
+        <p class="login-form__text">Имя*</p>
+        <input type="text" name="Имя" class="registration-input__name form-container__input"
+          style="text-transform: capitalize;" placeholder="Введите имя" />
+        <p class="login-form__text">Номер телефона*</p>
+        <input type="tel" name="phone-number" class="login-input__phone form-container__input" pattern="[0-9]{9}"
+          placeholder="Введите номер телефона">
+        <p class="login-form__text">E-mail</p>
+        <input type="e-mail" class="registration-input__mail form-container__input" placeholder="Введите E-mail" />
+        <p class="login-form__text">Пароль*</p>
+        <input type="password" class="registration-input__password form-container__input" placeholder="Введите пароль">
+        <input class="personal-data__checkbox checkbox checkbox--small" type="checkbox" id="personal-data--registration">
+        <label class="personal-data__label" for="personal-data--registration">
+          Согласие на обработку персональных данных
+        </label>
+        <button class="login-form__login-button button button--cyan">Войти</button>
+        <p class="registration-form__promt">Уже авторизованы?</p>
+        <!-- <span>Войти</span> -->
+        <button type="button" class="registration-form__close-button"></button>
+      </form>
+    </div>
+  </section>
   <script src="js/main.js"></script>
-  <!-- <script src="js/chief-slider.js"></script> -->
   </body>
   </html>

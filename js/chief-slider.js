@@ -4,6 +4,16 @@
  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
  */
 
+// инициализация слайдера старницы "О нас"
+    document.addEventListener('DOMContentLoaded', function () {
+      new ChiefSlider('.slider', {
+        loop: true,
+        autoplay: true,
+        interval: 5000,
+        refresh: true,
+      });
+    });
+
 (function() {
   if (typeof window.CustomEvent === 'function' ) return false;
   function CustomEvent(event, params) {

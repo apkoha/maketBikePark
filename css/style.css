@@ -2193,7 +2193,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background-color: #ffffff;
 }
 
-.login__button--enter {
+.login__button--active {
   border-bottom: 2px solid #297fff;
   color: #297fff;
 }
@@ -2214,6 +2214,33 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .login-input__password {
   margin-bottom: 40px;
+}
+
+.login-input__password {
+  position: relative;
+}
+
+.login-form__eye--blind {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 314px;
+  left: 550px;
+  cursor: pointer;
+  background-image: url(../img/blind-eye.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-form__eye {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 314px;
+  left: 550px;
+  background-image: url(../img/eye.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .login-form__login-button {
@@ -2258,14 +2285,33 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   padding: 42px 40px 56px 40px;
 }
 
-.login__button--registration {
-  border-bottom: 2px solid #297fff;
-  color: #297fff;
-}
-
 .registration-input__name,
 .registration-input__mail {
   margin-bottom: 34px;
+}
+
+.registration-form__eye--blind {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 245px;
+  left: 550px;
+  cursor: pointer;
+  background-image: url(../img/blind-eye.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.registration-form__eye {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 245px;
+  left: 550px;
+  cursor: pointer;
+  background-image: url(../img/eye.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .registration-form__promt {
