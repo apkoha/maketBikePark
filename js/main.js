@@ -107,7 +107,7 @@ function login_password(target){
 function registration_password(target){
 	var input = document.getElementById("registration__password");
   
-	if (input.getAttribute("type") == "password") {
+	if (input.getAttribute("type") === "password") {
 		target.classList.add("registration-form__eye");
 		input.setAttribute("type", "text");
 	} else {
